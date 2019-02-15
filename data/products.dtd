@@ -1,0 +1,11 @@
+<!ELEMENT products (product*)>
+<!ELEMENT product (name, images, short_description, full_description, price)>
+<!ATTLIST product id CDATA #REQUIRED>
+<!ATTLIST product category (Plate|Bowl|Platter|Tagine|Tea Set|Jug|Other) "Other">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT images (img+)>
+<!ELEMENT img (#PCDATA)>
+<!ELEMENT short_description (#PCDATA)>
+<!ELEMENT full_description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price text CDATA #IMPLIED>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products SYSTEM "products.dtd">
+<products>
+
+    <product id="1" category="Plate">
+        <name>Modern Red</name>
+        <images>
+            <img>4</img>
+        </images>
+        <short_description>Large plate in a contemporary Moroccan pattern</short_description>
+        <full_description>
+            Large plate in a contemporary Moroccan pattern\n
+            Hand crafted in Safi on Morocco's Atlantic coast these large plates and bowls are as useful as they are beautiful.\n
+            The perfect size for a centre fruit bow, great for serving a large salad or rice. Each one unique and bringing a true taste of Moroccan culture to your home.\n
+            They make an ideal gift!
+        </full_description>
+        <price text="per item">30</price>
+    </product>
+
+    <product id="2" category="Bowl">
+        <name>Blue Bowl</name>
+        <images>
+            <img>23</img>
+        </images>
+        <short_description>Traditional Moroccan large bowl in blue and white</short_description>
+        <full_description>
+            Traditional Moroccan large bowl in blue and white\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.
+        </full_description>
+        <price>25</price>
+    </product>
+
+    <product id="3" category="Plate">
+        <name>Large blue plate</name>
+        <images>
+            <img>1</img>
+            <img>3</img>
+            <img>5</img>
+            <img>6</img>
+        </images>
+        <short_description>Large plate in a traditional Moroccan blue and white pattern</short_description>
+        <full_description>
+            Large plate in a traditional Moroccan blue and white pattern\n
+            Hand crafted in Safi on Morocco's Atlantic coast these large plates are as useful as they are beautiful.\n
+            The perfect size for a centre fruit bow, great for serving a large salad or rice. Each one unique and bringing a true taste of Moroccan culture to your home.\n
+            They make an ideal gift
+        </full_description>
+        <price>35</price>
+    </product>
+
+    <product id="4" category="Platter">
+        <name>Green Platter</name>
+        <images>
+            <img>18</img>
+        </images>
+        <short_description>Large hand painted Moroccan platter in a traditional design, 40cm wide</short_description>
+        <full_description>
+            Large hand painted Moroccan platter in a traditional design, 40cm wide\n
+            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.\n
+            The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.\n
+            They make the perfect gift
+        </full_description>
+        <price>45</price>
+    </product>
+
+    <product id="5" category="Bowl">
+        <name>Yellow bowl and plate</name>
+        <images>
+            <img>11</img>
+            <img>16</img>
+        </images>
+        <short_description>Traditional Moroccan medium bowl and plate in yellow</short_description>
+        <full_description>
+            Traditional Moroccan medium bowl and plate in yellow\n
+            Size - 20cm wide\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            They make stunning gifts, bring a touch of Moroccan culture and individuality to your home.
+        </full_description>
+        <price text="per item">35</price>
+    </product>
+
+    <product id="6" category="Bowl">
+        <name>Orange bowls</name>
+        <images>
+            <img>10</img>
+        </images>
+        <short_description>Traditional Moroccan olive bowl in orange and white</short_description>
+        <full_description>
+            Traditional Moroccan olive bowl in orange and white\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            Ideal as great for soup, dips and crisps
+        </full_description>
+        <price>20</price>
+    </product>
+
+    <product id="7" category="Tagine">
+        <name>Tagine</name>
+        <images>
+            <img>15</img>
+        </images>
+        <short_description>Large traditional Moroccan terracotta tagine</short_description>
+        <full_description>
+            Large traditional Moroccan terracotta tagine.\n
+            Can be used on the hob with care, suitable for the oven but not the dishwasher. Perfect with a brazier\n
+            Requires a heat diffuser, for using on the hob. See bottom of the page\n
+            Recreate classic Moroccan tagines with the large tagine
+        </full_description>
+        <price>??</price>
+    </product>
+
+    <product id="8" category="Platter">
+        <name>Flower platter</name>
+        <images>
+            <img>2</img>
+            <img>5</img>
+            <img>6</img>
+        </images>
+        <short_description>Large hand painted Moroccan platter in a traditional design.</short_description>
+        <full_description>
+            Large hand painted Moroccan platter in a traditional design.\n
+            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.\n
+            The ideal size for the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.\n
+            They make the perfect gift
+        </full_description>
+        <price>40</price>
+    </product>
+
+    <product id="9" category="Tea Set">
+        <name>Tea glasses and tea tray</name>
+        <images>
+            <img>20</img>
+            <img>24</img>
+        </images>
+        <short_description>Set of six tea glasses with a different colour pattern &amp; large silver coloured engraved tea tray.</short_description>
+        <full_description>
+            Set of six tea glasses with a different colour pattern.\n
+            Large silver coloured engraved tea tray.\n
+            Perfect for serving mint tea\n
+            Not dishwasher safe.
+        </full_description>
+        <price>40</price>
+    </product>
+
+    <product id="10" category="Bowl">
+        <name>Terracotta bowl</name>
+        <images>
+            <img>0</img>
+        </images>
+        <short_description>Large hand painted Moroccan terracotta rim bowl in a traditional design</short_description>
+        <full_description>
+            Large hand painted Moroccan terracotta rim bowl in a traditional design\n
+            Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.\n
+            The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.\n
+            They make the perfect gift
+        </full_description>
+        <price>10</price>
+    </product>
+
+    <product id="11" category="Bowl">
+        <name>Flower bowl</name>
+        <images>
+            <img>21</img>
+        </images>
+        <short_description>Traditional Moroccan medium bowl in blue and white</short_description>
+        <full_description>
+            Traditional Moroccan medium bowl in blue and white\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            They make the perfect gift
+        </full_description>
+        <price>10</price>
+    </product>
+
+    <product id="12" category="Bowl">
+        <name>Skyblue bowl</name>
+        <images>
+            <img>8</img>
+        </images>
+        <short_description>Traditional Moroccan medium bowl in shades of blue.</short_description>
+        <full_description>
+            Traditional Moroccan medium bowl in shades of blue.\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            They make the perfect gift
+        </full_description>
+        <price>20</price>
+    </product>
+
+    <product id="13" category="Bowl">
+        <name>Olive bowls 1 and 2</name>
+        <images>
+            <img>12</img>
+            <img>13</img>
+            <img>14</img>
+        </images>
+        <short_description>Traditional Moroccan olive bowl in different colours</short_description>
+        <full_description>
+            Traditional Moroccan olive bowl in different colours\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            Ideal as great for soup, dips and crisps
+        </full_description>
+        <price>20</price>
+    </product>
+
+    <product id="14" category="Bowl">
+        <name>Pink bowl</name>
+        <images>
+            <img>19</img>
+        </images>
+        <short_description>Traditional Moroccan medium bowl in pink</short_description>
+        <full_description>
+            Traditional Moroccan medium bowl in pink\n
+            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.\n
+            Ideal as great for soup, dips and crisps
+        </full_description>
+        <price>20</price>
+    </product>
+
+    <product id="15" category="Jug">
+        <name>Jugs</name>
+        <images>
+            <img>17</img>
+        </images>
+        <short_description>Hand painted Moroccan terracotta jugs in a traditional design</short_description>
+        <full_description>
+            Hand painted Moroccan terracotta jugs in a traditional design\n
+            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.\n
+            The ideal size for the centre of the table, great for serving a juice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.\n
+            They make the perfect gift
+        </full_description>
+        <price text="each">10</price>
+    </product>
+    <!--
+    <product id="16" category="Other">
+        <name></name>
+        <images>
+            <img></img>
+        </images>
+        <short_description></short_description>
+        <full_description></full_description>
+        <price></price>
+    </product>
+    -->
+</products>
