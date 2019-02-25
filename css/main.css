@@ -11,7 +11,8 @@ html{
     -webkit-text-size-adjust:100%;
 }
 
-/* -- NAVIGATION BAR --*/
+
+/* -- NAVIGATION BAR -- */
 nav{
     overflow: visible;
     background-color: white;
@@ -60,14 +61,21 @@ nav img{
     color: darkolivegreen;
     text-align: center;
     text-decoration: none;
+    padding-bottom:"1px";
+    padding-left: "6px";
     font-size: 16px;
     line-height: 20px
 }
 .navbar-toggle:hover{
     font-size: 110%;
 }
-
 @media only screen and (max-width:600px){
     .navbar-item{display: none;}
     .navbar-toggle{display: block;}
+    .navbar-item.toggled{display: block;}
+    .navbar-toggle.toggled{padding-bottom: 15px; padding-left: 15px;}
+    main.toggled{margin-top: 295px;}
 }
+
+
+/* -- Main Content -- */
