@@ -11,18 +11,19 @@
         <!-- Meta data -->
 
         <!-- Tags -->
-        
+
         <!-- Responsive tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
 
     <body>
         <!-- Navigation -->
-        <nav class="">
+        <nav>
             <a id="navbar-logo" href="#">
                 <img src="img/logo_fired_bowl.png" alt="logo">
             </a>
             <div class="navbar-items">
+                <button class="navbar-toggle" onclick="toggle_menu()"><i class="fas fa-bars"></i></button>
                 <a class="navbar-item active" href="#">Home</a>
                 <a class="navbar-item" href="#">Products</a>
                 <a class="navbar-item" href="#">About</a>
@@ -33,6 +34,10 @@
 
         <!-- Page Content -->
         <main>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
             Hello world !<br>
             Hello world !<br>
             Hello world !<br>
@@ -115,5 +120,20 @@
         </footer>
 
         <!-- Scripts -->
+        <script>
+            function toggle_menu(){
+                var items = document.getElementsByClassName("navbar-item");
+                var icon_toggle = document.getElementById("navbar-toggle");
+                document.getElementsByTagName("main")[0].classList.toggle("toggled");
+                for (i = 0; i < items.length; i++){
+                    items[i].classList.toggle("toggled");
+                }
+                if (icon_toggle.classList.toggle("toggled")){
+                    icon_toggle.innerHTML = "<i class=\"fas fa-angle-up\"></i>";
+                }else{
+                    icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
+                }
+            }
+        </script>
     </body>
 </html>
