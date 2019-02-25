@@ -10,11 +10,13 @@ html{
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
 }
+button:focus, a:focus{
+    outline: none;
+}
 
 
 /* -- NAVIGATION BAR -- */
 nav{
-    overflow: visible;
     background-color: white;
     width: 100%;
     height:inherit;
