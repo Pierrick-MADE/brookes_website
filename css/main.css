@@ -1,17 +1,25 @@
-/* -- BODY -- */
+/* -- Main tags -- */
 body{
     margin: 0px;
 }
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+main{
+    padding: 16px;
+    margin-top: 45px;
+}
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+}
 
 /* -- NAVIGATION BAR --*/
 nav{
-    /*overflow: hidden;*/
-    background-color: lightgray;
+    overflow: visible;
+    background-color: white;
     width: 100%;
     height:inherit;
     position: fixed;
     top: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 nav img{
     height: 40px;
@@ -27,6 +35,7 @@ nav img{
     vertical-align: middle
 }
 .navbar-item{
+    display: inline;
     padding-right: 10px;
     padding-left: 15px;
     padding-bottom: 15px;
@@ -40,6 +49,25 @@ nav img{
     /*text-shadow: 1px 0px 1px black;*/
 }
 .navbar-item.active{
-    font-weight: bold
+    font-weight: bold;
     /*text-shadow: 1px 0px 0px black;*/
+}
+.navbar-toggle{
+    float: right;
+    display: none;
+    background-color: transparent; 
+    border: none;
+    color: darkolivegreen;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px
+}
+.navbar-toggle:hover{
+    font-size: 110%;
+}
+
+@media only screen and (max-width:600px){
+    .navbar-item{display: none;}
+    .navbar-toggle{display: block;}
 }
