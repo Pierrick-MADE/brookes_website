@@ -123,7 +123,7 @@
         <script>
             function toggle_menu(){
                 var items = document.getElementsByClassName("navbar-item");
-                var icon_toggle = document.getElementById("navbar-toggle");
+                var icon_toggle = document.getElementsByClassName("navbar-toggle")[0];
                 document.getElementsByTagName("main")[0].classList.toggle("toggled");
                 for (i = 0; i < items.length; i++){
                     items[i].classList.toggle("toggled");
