@@ -2,6 +2,7 @@
 body{
     margin: 0px;
 }
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 
 /* -- NAVIGATION BAR --*/
 nav{
