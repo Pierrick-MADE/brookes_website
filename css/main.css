@@ -1,0 +1,44 @@
+/* -- BODY -- */
+body{
+    margin: 0px;
+}
+
+/* -- NAVIGATION BAR --*/
+nav{
+    /*overflow: hidden;*/
+    background-color: lightgray;
+    width: 100%;
+    height:inherit;
+    position: fixed;
+    top: 0;
+}
+nav img{
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+.navbar-items{
+    float: right;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: middle
+}
+.navbar-item{
+    padding-right: 10px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-decoration: none;
+    color: darkolivegreen;
+    line-height: 20px;
+}
+.navbar-item:hover{
+    color: black;
+    /*text-shadow: 1px 0px 1px black;*/
+}
+.navbar-item.active{
+    font-weight: bold
+    /*text-shadow: 1px 0px 0px black;*/
+}

@@ -5,7 +5,7 @@
     <product id="1" category="Plate">
         <name>Modern Red</name>
         <images>
-            <img>4</img>
+            <img>11</img>
         </images>
         <short_description>Large plate in a contemporary Moroccan pattern</short_description>
         <full_description>
@@ -34,9 +34,6 @@
         <name>Large blue plate</name>
         <images>
             <img>1</img>
-            <img>3</img>
-            <img>5</img>
-            <img>6</img>
         </images>
         <short_description>Large plate in a traditional Moroccan blue and white pattern</short_description>
         <full_description>
@@ -66,7 +63,6 @@
     <product id="5" category="Bowl">
         <name>Yellow bowl and plate</name>
         <images>
-            <img>11</img>
             <img>16</img>
         </images>
         <short_description>Traditional Moroccan medium bowl and plate in yellow</short_description>
@@ -112,6 +108,7 @@
         <name>Flower platter</name>
         <images>
             <img>2</img>
+            <img>4</img>
             <img>5</img>
             <img>6</img>
         </images>
@@ -144,7 +141,7 @@
     <product id="10" category="Bowl">
         <name>Terracotta bowl</name>
         <images>
-            <img>0</img>
+            <img>21</img>
         </images>
         <short_description>Large hand painted Moroccan terracotta rim bowl in a traditional design</short_description>
         <full_description>
@@ -189,7 +186,6 @@
         <images>
             <img>12</img>
             <img>13</img>
-            <img>14</img>
         </images>
         <short_description>Traditional Moroccan olive bowl in different colours</short_description>
         <full_description>
