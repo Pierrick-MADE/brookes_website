@@ -1,4 +1,4 @@
-/* -- Main tags -- */
+/* --------------------- Main tags ----------------------------------------- */
 body{
     margin: 0px;
 }
@@ -13,9 +13,34 @@ html{
 button:focus, a:focus{
     outline: none;
 }
+/* row and col system inspired by w3.css */
+.row{
+    display: table;
+    clear: both;
+}
+.col{
+    float:left;
+    width:100%;
+}
+@media (min-width:600px){
+    .col.c1{width:8.33333%}
+    .col.c2{width:16.66666%}
+    .col.c3{width:24.99999%}
+    .col.c4{width:33.33333%}
+    .col.c5{width:41.66666%}
+    .col.c6{width:49.99999%}
+    .col.c7{width:58.33333%}
+    .col.c8{width:66.66666%}
+    .col.c9{width:74.99999%}
+    .col.c10{width:83.33333%}
+    .col.c11{width:91.66666%}
+    .col.c12{width:99.99999%}
+}
+.centered{
+    text-align: center;
+}
 
-
-/* -- NAVIGATION BAR -- */
+/* --------------------- NAVIGATION BAR ------------------------------------ */
 nav{
     background-color: white;
     width: 100%;
@@ -80,4 +105,57 @@ nav img{
 }
 
 
-/* -- Main Content -- */
+/* --------------------- Main Content -------------------------------------- */
+
+
+
+/* --------------------- Footer -------------------------------------------- */
+footer{
+    width:100%;
+    background-color: white;
+    height:inherit;
+    box-shadow: 0 0px 10px 0 rgba(0,0,0,0.12), 0 0px 15px 0 rgba(0,0,0,0.12);
+    line-height: 25px;
+}
+footer .col{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+footer a{
+    color:black;
+    text-decoration: none;
+}
+footer a:hover:not(.icon){
+    font-size: 110%;
+}
+footer .icon{
+    font-size: 25px;
+    padding: 8px;
+}
+footer .icon:hover{
+    color:saddlebrown;
+}
+footer form{
+    padding:10px;
+}
+input[type=text]{
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit]{
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    border: 1px solid #ccc;
+    background-color: white;
+    color: saddlebrown;
+}
