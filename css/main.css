@@ -158,6 +158,7 @@ nav img{
     .navbar-item.toggled{display: block;}
     .navbar-toggle.toggled{padding-bottom: 15px; padding-left: 15px;}
     /*main.toggled{margin-top: 0px;}*/
+    nav hr{display:none;}
 }
 nav hr{
     height: 3px;
