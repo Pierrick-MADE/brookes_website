@@ -12,6 +12,10 @@
 .blue{color:var(--blue);}
 .olive{color:var(--olive);}
 
+.onImage{color:var(--white);}
+
+.text-title{font-size: 22px; font-weight: bold}
+
 
 /* --------------------- Main tags ----------------------------------------- */
 body{
@@ -30,6 +34,19 @@ html{
 }
 button:focus, a:focus{
     outline: none;
+}
+button{
+    background-color: var(--white);
+    padding: 10px 30px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    transition: all .1s ease-in-out;
+}
+button:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari */
+    transform: scale(1.1);
 }
 /* row and col system inspired by w3.css */
 .row{
@@ -67,6 +84,11 @@ button:focus, a:focus{
 .padding-20{padding: 20px 20px;}
 .padding-30{padding: 30px 30px;}
 
+.box-shadow{
+    -webkit-box-shadow: 8px 8px 19px -1px rgba(94,94,94,1);
+    -moz-box-shadow: 8px 8px 19px -1px rgba(94,94,94,1);
+    box-shadow: 8px 8px 19px -1px rgba(94,94,94,1);
+}
 
 /* --------------------- NAVIGATION BAR ------------------------------------ */
 nav{
@@ -107,6 +129,7 @@ nav img{
 }
 .navbar-item:hover{
     color: var(--black);
+
     /*text-shadow: 1px 0px 1px var(--black);*/
 }
 .navbar-item.active{
@@ -136,6 +159,24 @@ nav img{
     .navbar-toggle.toggled{padding-bottom: 15px; padding-left: 15px;}
     /*main.toggled{margin-top: 0px;}*/
 }
+nav hr{
+    height: 3px;
+    border: none;
+    margin: 3px 0 0 0;
+    background: var(--brown);
+    transition: 0.3s ease-in-out;
+}
+nav .item1.active ~ hr{margin-left:2%; width:17%;}
+nav .item2.active ~ hr{margin-left:23%; width:19%;}
+nav .item3.active ~ hr{margin-left:48%; width:14.5%;}
+nav .item4.active ~ hr{margin-left:67%; width:17%;}
+nav .item5.active ~ hr{margin-left:90%; width:9%;}
+nav .item1:hover ~ hr{margin-left:2%; width:17%;}
+nav .item2:hover ~ hr{margin-left:23%; width:19%;}
+nav .item3:hover ~ hr{margin-left:47%; width:14.5%;}
+nav .item4:hover ~ hr{margin-left:67%; width:17%;}
+nav .item5:hover ~ hr{margin-left:90%; width:9%;}
+
 
 
 /* --------------------- Footer -------------------------------------------- */
@@ -190,6 +231,13 @@ input[type=submit]:hover{
 }
 
 
-
-
 /* --------------------- HOME PAGE ----------------------------------------- */
+.image_button{
+
+    transition: all .1s ease-in-out;
+}
+.image_button:hover{
+    -ms-transform: scale(1.08); /* IE 9 */
+    -webkit-transform: scale(1.08); /* Safari */
+    transform: scale(1.08);
+}
