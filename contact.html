@@ -19,7 +19,7 @@
     <body>
         <!-- Navigation -->
         <nav>
-            <a id="navbar-logo" href="#">
+            <a id="navbar-logo" href="index.html">
                 <img src="img/logo_fired_bowl.png" alt="logo">
             </a>
             <div class="navbar-items">
@@ -35,11 +35,48 @@
 
         <!-- Page Content -->
         <main>
-            1<br>
-            2<br>
-            3<br>
-            4<br>
-            This is the contact Page !<br>
+            <!-- <a href="index.html">Home</a> / <a href="contact.html">Contact</a> -->
+            <div class="relative" style="margin: 20px;">
+                <iframe  width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5155322494740278%2C51.6672082100408%2C-0.9909350815052775%2C51.8438146140756&amp;layer=hot&amp;marker=51.755597744783344%2C-1.253233665489688" style="border: 2px solid grey"></iframe>
+                <div class=" absolute contact-infos padding-20 centered box-shadow" style="background-color: var(--white); opacity: 0.8;">
+                    <a class="icon" href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a class="icon" href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a class="icon" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="icon" href="#"><i class="far fa-envelope"></i></a><br>
+                    +33 6 00 11 22 33<br>
+                    contact@firedBowl.com<br>
+                    68 Hollow road, London, UK<br>
+                    Monday-Saturday : 8am - 5pm
+                </div>
+            </div>
+            <h2 class="centered">Get in touch</h2>
+            <form action="" class="contact-form">
+                <div class="row centered">
+                    <div class="col c4">
+                        <div class="padding-10">
+                            <input class="box-shadow" type="text" name="name" placeholder="Your name">
+                        </div>
+                    </div>
+                    <div class="col c4">
+                        <div class="padding-10">
+                            <input class="box-shadow" type="tel" name="number" placeholder="Your phone number">
+                        </div>
+                    </div>
+                    <div class="col c4">
+                        <div class="padding-10">
+                            <input class="box-shadow" type="email" name="mail" placeholder="Your email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row centered">
+                    <div class="col c12">
+                        <div class="padding-10">
+                            <textarea name="message" placeholder="Your message" ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="SUBMIT">
+            </form>
         </main>
 
         <!-- Footer -->

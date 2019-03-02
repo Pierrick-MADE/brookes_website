@@ -52,6 +52,7 @@ button:hover{
 .row{
     display: table;
     clear: both;
+    width: 100%;
 }
 .col{
     float: left;
@@ -90,6 +91,11 @@ button:hover{
     box-shadow: 8px 8px 19px -1px rgba(94,94,94,1);
 }
 
+input{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 /* --------------------- NAVIGATION BAR ------------------------------------ */
 nav{
     max-width: 1180px;
@@ -114,16 +120,17 @@ nav img{
     float: right;
     padding-right: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
     vertical-align: middle
 }
 .navbar-item{
     display: inline;
+    clear: both;
     padding-right: 10px;
     padding-left: 15px;
     padding-bottom: 15px;
     padding-top: 15px;
     text-decoration: none;
+    text-align: right;
     color: var(--olive);
     line-height: 20px;
 }
@@ -143,20 +150,20 @@ nav img{
     border: none;
     color: var(--olive);
     text-align: center;
+    padding: 4px 4px 0 0;
     text-decoration: none;
-    padding-bottom:"1px";
-    padding-left: "6px";
     font-size: 16px;
-    line-height: 20px
+    line-height: 17px;
+    vertical-align: middle
 }
 .navbar-toggle:hover{
-    font-size: 110%;
+    font-size: 17px;
 }
 @media only screen and (max-width:600px){
     .navbar-item{display: none;}
-    .navbar-toggle{display: block;}
+    .navbar-toggle{display: inline;}
     .navbar-item.toggled{display: block;}
-    .navbar-toggle.toggled{padding-bottom: 15px; padding-left: 15px;}
+    .navbar-item.toggled:hover{font-size: 110%;}
     /*main.toggled{margin-top: 0px;}*/
     nav hr{display:none;}
 }
@@ -209,7 +216,7 @@ footer .icon:hover{
 footer form{
     padding:10px;
 }
-input[type=text]{
+footer input[type=text]{
     padding: 10px 10px;
     margin-bottom: 10px;
     display: inline-block;
@@ -217,15 +224,14 @@ input[type=text]{
     border-radius: 4px;
     width: 90%;
 }
-input[type=submit]{
+footer input[type=submit]{
     background-color: var(--brown);
     color: var(--white);
     padding: 10px 20px;
     border: 1px solid var(--brown);
-    border-radius: 4px;
     cursor: pointer;
 }
-input[type=submit]:hover{
+footer input[type=submit]:hover{
     border: 1px solid var(--brown);
     background-color: var(--white);
     color: var(--brown);
@@ -241,4 +247,58 @@ input[type=submit]:hover{
     -ms-transform: scale(1.08); /* IE 9 */
     -webkit-transform: scale(1.08); /* Safari */
     transform: scale(1.08);
+}
+
+
+/* --------------------- CONTACT PAGE -------------------------------------- */
+.contact-infos{
+    border-radius:4px;
+    top:50%;
+    right:1%;
+    transform: translate(0%,-50%);
+    -ms-transform:translate(0%,-50%);
+}
+.contact-infos .icon{
+    color: var(--brown);
+    font-size: 20px;
+    line-height: 25px;
+    padding: 3px;
+}
+@media only screen and (max-width:600px){
+    .contact-infos{
+        position:absolute;
+        top:1%;
+        right:1%;
+        transform:translate(0%,0%);
+        -ms-transform:translate(0%,0%);
+    }
+}
+.contact-form input:not([type="submit"]), .contact-form textarea{
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px 7px;
+    width:100%;
+    padding: 10px 0 10px 0;
+    text-indent: 40px;
+}
+.contact-form input[name="mail"]{background-image: url(../img/envelope.jpg);}
+.contact-form input[name="name"]{background-image: url(../img/user.jpg);}
+.contact-form input[name="number"]{background-image: url(../img/phone.jpg);}
+.contact-form textarea[name="message"]{background-image: url(../img/comment.jpg); height:100px;}
+.contact-form input[type=submit]{
+    float: right;
+    margin: 0 10px 30px 0;
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 10px 20px;
+    border: 1px solid var(--brown);
+    cursor: pointer;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.contact-form input[type=submit]:hover{
+    border: 1px solid var(--brown);
+    background-color: var(--white);
+    color: var(--brown);
 }
