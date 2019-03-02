@@ -1,3 +1,54 @@
+/* --------------------- RESET CSS ----------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 /* --------------------- TEXT FONT & COLORS -------------------------------- */
 :root {
     --white: #FFFFFF;
@@ -14,7 +65,7 @@
 
 .onImage{color:var(--white);}
 
-.text-title{font-size: 22px; font-weight: bold}
+.text-title{font-size: 22px; font-weight: bold; text-decoration: none; text-decoration: none;}
 
 
 /* --------------------- Main tags ----------------------------------------- */
@@ -31,22 +82,13 @@ main{
 html{
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 button:focus, a:focus{
     outline: none;
 }
-button{
-    background-color: var(--white);
-    padding: 10px 30px;
-    border: none;
-    text-align: center;
-    font-weight: bold;
-    transition: all .1s ease-in-out;
-}
-button:hover{
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari */
-    transform: scale(1.1);
+a:link, a:visited, a:active, a:hover{
+    color:black;
 }
 /* row and col system inspired by w3.css */
 .row{
@@ -249,9 +291,31 @@ footer input[type=submit]:hover{
     transform: scale(1.08);
 }
 
+.home-btn-discover{
+    bottom: 4%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--white);
+    opacity: 0.8;
+    color: var(--black);
+    border: 3px solid var(--brown);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 30px;
+    text-align: center;
+    transition: all .1s ease-in-out;
+}
+.home-btn-discover:hover{
+    -ms-transform: scale(1.1) translate(-45%, 0); /* IE 9 */
+    -webkit-transform: scale(1.1) translate(-45%, 0); /* Safari */
+    transform: scale(1.1) translate(-45%, 0);
+}
 
 /* --------------------- CONTACT PAGE -------------------------------------- */
 .contact-infos{
+    background-color: var(--white);
+    opacity: 0.8;
     border-radius:4px;
     top:50%;
     right:1%;
