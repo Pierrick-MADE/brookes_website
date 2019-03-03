@@ -281,13 +281,12 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- HOME PAGE ----------------------------------------- */
-.image_button{
-
-    transition: all .1s ease-in-out;
+.image_button {
+    transition: all 0.1s ease-in-out    
 }
 .image_button:hover{
     -ms-transform: scale(1.08); /* IE 9 */
-    -webkit-transform: scale(1.08); /* Safari */
+    -webkit-transform: scale(1.08);/* Safari */
     transform: scale(1.08);
 }
 
@@ -311,6 +310,22 @@ footer input[type=submit]:hover{
     -webkit-transform: scale(1.1) translate(-45%, 0); /* Safari */
     transform: scale(1.1) translate(-45%, 0);
 }
+
+/* --------------------- PRODUCTS PAGE ------------------------------------- */
+.image_button {
+    transition: all 0.1s ease-in-out    
+}
+.image_button:hover{
+    -ms-transform: scale(1.08); /* IE 9 */
+    -webkit-transform: scale(1.08);/* Safari */
+    transform: scale(1.08);
+}
+.price {
+    bottom: 0%;
+    right: 3%;
+    transform: translate(0%,-50%);
+}
+
 
 /* --------------------- CONTACT PAGE -------------------------------------- */
 .contact-infos{
