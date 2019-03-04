@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col c3">
+                <div class="col c3 filters">
                     <div class="padding-20">
                         <div class="filter category">
                             <div class="text-title">Filter</div>
@@ -92,21 +92,43 @@
                 </div>
                 <div class="col c9">
                     <div class="row">
-                        <div id="1" class="col c6" style="transition: all 1s">
-                            <div class="padding-20 product">
-                                <div class="relative image_button">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/7.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
+                        <div id="1" class="c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('1')">
+                                            <img class="box-shadow" src="img/1.jpg" width="100%" alt="Bowls">
+                                            <div class="absolute onImage price text-title">
+                                                £ 34
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="absolute product-close-btn">
+                                    <a onclick="seeProduct('1')"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="padding-20">
+                                    <div class="text-title">
+                                        Blue &amp; Green Bowls
+                                    </div>
+                                    <button class="add-to-cart" onclick="">ADD to cart</button>
+                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px">
+
+                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
+                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
+                                    They make the perfect gift
                                 </div>
                             </div>
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/4.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -118,7 +140,7 @@
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/2.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -130,7 +152,7 @@
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -142,7 +164,7 @@
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -154,7 +176,7 @@
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -166,7 +188,7 @@
                         </div>
                         <div class="col c6">
                             <div class="padding-20 product">
-                                <div class="relative image_button">
+                                <div class="relative image-btn">
                                     <a onclick="seeProduct('1')">
                                         <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
                                         <div class="absolute onImage price text-title">
@@ -180,6 +202,16 @@
                 </div>
             </div>
         </main>
+
+
+        <!-- POPUP -->
+        <div class="popup hide">
+            <div class="popup-content relative">
+                <img class="absolute popup-img" src="img/1.jpg" width="100%">
+                <a class="absolute popup-close-btn"><i class="fas fa-search-minus"></i></a>
+            </div>
+        </div>
+
 
         <!-- Footer -->
         <footer class="row centered">
@@ -224,6 +256,36 @@
                     icon_toggle.innerHTML = "<i class=\"fas fa-angle-up\"></i>";
                 }else{
                     icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
+                }
+            }
+            function seeProduct(product_id){
+                var product = document.getElementById(product_id);
+                //var document.getElementsByClassName("product-toggled")
+                //used to close all other product-toggle ?
+                var details = product.getElementsByClassName("product-details")[0];
+                var description = product.getElementsByClassName("product-description")[0];
+                var img = product.getElementsByClassName("product-img")[0];
+                if (product.classList.toggle("product-toggled")){
+                    img.setAttribute("onclick", "seePicture('" + product_id + "')" );
+                    img.style.cursor = "zoom-in";
+                }
+                else{
+                    img.setAttribute("onclick", "seeProduct('" + product_id + "')" );
+                    img.style.cursor = "pointer";
+                }
+                details.classList.toggle("hide");
+                description.classList.toggle("hide");
+            }
+            function seePicture(product_id){
+                var popup = document.getElementsByClassName("popup")[0];
+                var img = popup.getElementsByTagName("img")[0];
+                var body = document.getElementsByTagName("body")[0];
+                img.setAttribute("src", "img/" + product_id + ".jpg");
+                popup.setAttribute("onclick", "seePicture('" + product_id + "')" );
+                if (popup.classList.toggle("hide")){
+                    body.style.overflow = "auto";
+                }else{
+                    body.style.overflow = "hidden";
                 }
             }
         </script>

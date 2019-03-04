@@ -1,7 +1,7 @@
 /* --------------------- RESET CSS ----------------------------------------- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,35 +16,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -89,6 +89,9 @@ button:focus, a:focus{
 }
 a:link, a:visited, a:active, a:hover{
     color:black;
+}
+a:hover{
+    cursor: pointer;
 }
 /* row and col system inspired by w3.css */
 .row{
@@ -136,6 +139,9 @@ a:link, a:visited, a:active, a:hover{
 input{
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.hide {
+    display: none;
 }
 
 /* --------------------- NAVIGATION BAR ------------------------------------ */
@@ -209,6 +215,8 @@ nav img{
     /*main.toggled{margin-top: 0px;}*/
     nav hr{display:none;}
 }
+
+/* underline inspired by https://codepen.io/rm/pen/ldhon */
 nav hr{
     height: 3px;
     border: none;
@@ -281,10 +289,10 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- HOME PAGE ----------------------------------------- */
-.image_button {
+.image-btn {
     transition: all 0.1s ease-in-out    
 }
-.image_button:hover{
+.image-btn:hover{
     -ms-transform: scale(1.08); /* IE 9 */
     -webkit-transform: scale(1.08);/* Safari */
     transform: scale(1.08);
@@ -312,20 +320,120 @@ footer input[type=submit]:hover{
 }
 
 /* --------------------- PRODUCTS PAGE ------------------------------------- */
-.image_button {
-    transition: all 0.1s ease-in-out    
+.filters{
+    position: sticky;
+    top: 10%;
 }
-.image_button:hover{
-    -ms-transform: scale(1.08); /* IE 9 */
-    -webkit-transform: scale(1.08);/* Safari */
-    transform: scale(1.08);
+.image-btn {
+    transition: all 0.1s ease-in-out;    
+}
+.image-btn:hover{
+    -ms-transform: scale(1.06); /* IE 9 */
+    -webkit-transform: scale(1.06);/* Safari */
+    transform: scale(1.06);
 }
 .price {
     bottom: 0%;
     right: 3%;
     transform: translate(0%,-50%);
 }
+.add-to-cart{
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 10px 20px;
+    display:block;
+    margin: 20px auto;
+    border: 1px solid var(--brown);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+}
+.add-to-cart:hover{
+    border: 1px solid var(--brown);
+    background-color: var(--white);
+    color: var(--brown);
+}
+.product-toggled{
+    float:left;
+    margin: 0 9px;
+}
+.product-close-btn{
+    right: 0.5%;
+    top: 2%;
+    transform: translate(-50%,0%);
+    font-size: 20px;
+}
+.product-close-btn:hover{
+    font-size: 22px;
+}
+@media only screen and (max-width:600px){
+    .product-close-btn{right:2%;top:58%} /*74 % if description not toggled*/
+    .image-btn:hover{-ms-transform: scale(1.03); -webkit-transform: scale(1.03); transform: scale(1.03);}
+    .filters{position:static;}
+}
 
+.popup{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgb(174, 174, 174); /* Fallback for older browsers */
+    background-color: rgba(0,0,0,0.7);
+    -webkit-animation: popup-bg-in 1s; /* Safari 4+ */
+    -moz-animation:    popup-bg-in 1s; /* Fx 5+ */
+    -o-animation:      popup-bg-in 1s; /* Opera 12+ */
+    animation:         popup-bg-in 1s; /* IE 10+, Fx 29+ */
+}
+.popup-content{
+    width: 80%;
+    height: 100%;
+    max-width: 800px;
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto;
+    -webkit-animation: popup-zoom-in 1s; /* Safari 4+ */
+    -moz-animation:    popup-zoom-in 1s; /* Fx 5+ */
+    -o-animation:      popup-zoom-in 1s; /* Opera 12+ */
+    animation:         popup-zoom-in 1s; /* IE 10+, Fx 29+ */
+}
+.popup-close-btn{
+    right: 2%;
+    top: 20%;
+    transform: translate(-50%,0%);
+    font-size: 30px;
+    color: var(--white);
+}
+.popup-close-btn:hover{
+    font-size: 33px;
+    color: var(--white);
+}
+.popup-img{
+    top:50%;
+    left:50%;
+    cursor: zoom-out;
+    transform: translate(-50%,-50%);
+}
+/* animations compatibility found on : */
+/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
+@-webkit-keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
+@-moz-keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
+@-o-keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
+@keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
+@-webkit-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
+@-moz-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
+@-o-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
+@keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
+
+@media only screen and (max-width: 600px){
+    .popup-content{width:100%;}
+    @-webkit-keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
+    @-moz-keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
+    @-o-keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
+    @keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
+}
 
 /* --------------------- CONTACT PAGE -------------------------------------- */
 .contact-infos{
