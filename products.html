@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
 
-    <body>
+    <body onloadstart="initProducts">
         <!-- Navigation -->
         <nav>
             <a id="navbar-logo" href="index.html">
@@ -60,7 +60,7 @@
                             <a onclick="filter('Tagine')">
                                 Tagine
                             </a>
-                            <a onclick="filter('Tea Set')">
+                            <a onclick="filter('Tea-Set')">
                                 Tea Set
                             </a>
                             <a onclick="filter('Jug')">
@@ -91,8 +91,8 @@
                     </div>
                 </div>
                 <div class="col c9">
-                    <div class="row">
-                        <div id="1" class="c12 relative box-shadow">
+                    <div id="products" class="row">
+                        <div id="1" class="Platter c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
                                     <div class="relative image-btn">
@@ -126,78 +126,112 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/4.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
+
+                        <div id="2" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('2')">
+                                            <img class="box-shadow" src="img/2.jpg" width="100%" alt="Bowls">
+                                            <div class="absolute onImage price text-title">
+                                                £ 34
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="absolute product-close-btn">
+                                    <a onclick="seeProduct('2')"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="padding-20">
+                                    <div class="text-title">
+                                        Blue &amp; Green Bowls
+                                    </div>
+                                    <button class="add-to-cart" onclick="">ADD to cart</button>
+                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px">
+
+                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
+                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
+                                    They make the perfect gift
                                 </div>
                             </div>
                         </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/2.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
+
+                        <div id="3" class="Plate c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('3')">
+                                            <img class="box-shadow" src="img/3.jpg" width="100%" alt="Bowls">
+                                            <div class="absolute onImage price text-title">
+                                                £ 34
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="absolute product-close-btn">
+                                    <a onclick="seeProduct('3')"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="padding-20">
+                                    <div class="text-title">
+                                        Blue &amp; Green Bowls
+                                    </div>
+                                    <button class="add-to-cart" onclick="">ADD to cart</button>
+                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px">
+
+                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
+                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
+                                    They make the perfect gift
                                 </div>
                             </div>
                         </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
+                        
+                        <div id="4" class="Platter c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('4')">
+                                            <img class="box-shadow" src="img/4.jpg" width="100%" alt="Bowls">
+                                            <div class="absolute onImage price text-title">
+                                                £ 34
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="absolute product-close-btn">
+                                    <a onclick="seeProduct('4')"><i class="fas fa-times"></i></a>
+                                </div>
+                                <div class="padding-20">
+                                    <div class="text-title">
+                                        Blue &amp; Green Bowls
+                                    </div>
+                                    <button class="add-to-cart" onclick="">ADD to cart</button>
+                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px">
+
+                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
+                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
+                                    They make the perfect gift
                                 </div>
                             </div>
                         </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col c6">
-                            <div class="padding-20 product">
-                                <div class="relative image-btn">
-                                    <a onclick="seeProduct('1')">
-                                        <img class="box-shadow" src="img/16.jpg" width="100%" alt="Bowls">
-                                        <div class="absolute onImage price text-title">
-                                            £ 34
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -287,6 +321,37 @@
                 }else{
                     body.style.overflow = "hidden";
                 }
+            }
+            function filter(type){
+                var products = document.getElementById("products").children;
+                
+                /*for each product : check if class contains type or not*/
+                for (var i=0; i < products.length; i++){
+                    console.log("product", products[i]);
+                    if (products[i].classList.contains(type) || type === "all"){
+                        products[i].classList.remove("hide");
+                    }else{
+                        products[i].classList.add("hide");
+                    }
+                }
+                
+                /* make the filter button used active (e.g. bold) */
+                var buttons = document.getElementsByClassName("filter category")[0].children;
+                for (var i = 1; i < buttons.length; i++){
+                    console.log('button', buttons[i]);
+                    if (buttons[i].getAttribute("onclick") === "filter(\'"+type+"\')"){
+                        buttons[i].classList.add("active");
+                    }else{
+                        buttons[i].classList.remove("active");
+                    }
+                }
+            }
+            
+            function initProducts(){
+                var products = document.getElementById("products");
+                
+                /* create a child for each product of the xml page*/
+                /* and append this child to products */
             }
         </script>
     </body>
