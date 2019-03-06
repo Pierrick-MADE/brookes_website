@@ -66,7 +66,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a href="products.html">
+                            <a onclick="showProduct('Platter')">
                                 <img class="box-shadow" src="img/1.jpg" width="100%" alt="Platter"> <!--or ....jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Plates &amp; Platters
@@ -78,7 +78,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a href="products.html">
+                            <a onclick="showProduct('Tagine')">
                                 <img class="box-shadow" src="img/15.jpg" width="100%" alt="Tagines"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; left:5%;">
                                     Tagines
@@ -90,7 +90,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a href="products.html">
+                            <a onclick="showProduct('all')">
                                 <img class="box-shadow" src="img/24.jpg" width="100%" alt="Image showing tea glasses"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; left:5%;">
                                     See All !
@@ -148,14 +148,8 @@
                 }
             }
             function showProduct(type){
+                sessionStorage.setItem("homeFilter", type);
                 location.assign("products.html");
-                console.log("current document", document);
-                debugger;
-                var productDoc =  Document();
-                console.log("product document", productDoc);
-                debugger;
-                productDoc.filter(type);
-                debugger;
             }
         </script>
     </body>

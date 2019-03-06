@@ -337,6 +337,9 @@ footer input[type=submit]:hover{
     position: sticky;
     top: 10%;
 }
+.filter a.active{
+    font-weight: bold;
+}
 .image-btn {
     transition: all 0.1s ease-in-out;    
 }
@@ -349,6 +352,9 @@ footer input[type=submit]:hover{
     bottom: 0%;
     right: 3%;
     transform: translate(0%,-50%);
+}
+.price::before{
+    content: "£ ";
 }
 .add-to-cart{
     background-color: var(--brown);
