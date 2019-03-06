@@ -37,21 +37,24 @@
         <main>
             <div class="relative">
                 <img src="img/17.jpg" alt="Main image showing the type of work done" width=100%>
-                <div class="absolute onImage text-title" style="top:60%; left:2%;)">
-                    quick description
-                </div>
                 <div class="absolute home-btn-discover">
-                    <a href="#discover-products" class="text-title">Discover<br>Products !!</a>
+                    <a href="#discover-products" class="text-title">Discover<br>Products !</a>
+                </div>
+                <div class="absolute onImage text-title centered home-main-description">
+                    Bautifully handmade &amp; hand-painted traditional Moroccan ceramics
                 </div>
             </div>
+            <div class="text-title centered padding-10 home-main-description-small">
+                Bautifully handmade &amp; hand-painted traditional Moroccan ceramics
+            </div>
             <div id="discover-products" class="centered padding-20">
-                Short Description
+                Discover our extensive selection
             </div>
             <div class="row" style="margin-bottom: 15px;">
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a href="products.html">
+                            <a onclick="showProduct('Bowl')">
                                 <img class="box-shadow" src="img/7.jpg" width="100%" alt="Bowls"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Bowls
@@ -143,6 +146,16 @@
                 }else{
                     icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
                 }
+            }
+            function showProduct(type){
+                location.assign("products.html");
+                console.log("current document", document);
+                debugger;
+                var productDoc =  Document();
+                console.log("product document", productDoc);
+                debugger;
+                productDoc.filter(type);
+                debugger;
             }
         </script>
     </body>

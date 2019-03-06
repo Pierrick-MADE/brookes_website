@@ -299,14 +299,14 @@ footer input[type=submit]:hover{
 }
 
 .home-btn-discover{
-    bottom: 4%;
+    bottom: 2%;
     text-align: center;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: var(--white);
     opacity: 0.8;
     color: var(--black);
-    border: 3px solid var(--brown);
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     padding: 10px 30px;
@@ -317,6 +317,19 @@ footer input[type=submit]:hover{
     -ms-transform: scale(1.1) translate(-45%, 0); /* IE 9 */
     -webkit-transform: scale(1.1) translate(-45%, 0); /* Safari */
     transform: scale(1.1) translate(-45%, 0);
+}
+.home-main-description{
+    top: 60%;
+    left: 2%;
+    width: 35%;
+    line-height: 30px;
+}
+.home-main-description-small{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    .home-main-description{display:none;}
+    .home-main-description-small{display: block;}
 }
 
 /* --------------------- PRODUCTS PAGE ------------------------------------- */
@@ -356,7 +369,7 @@ footer input[type=submit]:hover{
 }
 .product-toggled{
     float:left;
-    margin: 0 9px;
+    margin: 0 9px 10px 9px;
 }
 .product-close-btn{
     right: 0.5%;
@@ -400,6 +413,7 @@ footer input[type=submit]:hover{
     animation:         popup-zoom-in 1s; /* IE 10+, Fx 29+ */
 }
 .popup-close-btn{
+    display:none;
     right: 2%;
     top: 20%;
     transform: translate(-50%,0%);

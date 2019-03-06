@@ -107,7 +107,7 @@
                             </div>
                             <div class="col c6 hide product-details">
                                 <div class="absolute product-close-btn">
-                                    <a onclick="seeProduct('1')"><i class="fas fa-times"></i></a>
+                                    <a onclick="closeProduct('1')"><i class="fas fa-times"></i></a>
                                 </div>
                                 <div class="padding-20">
                                     <div class="text-title">
@@ -142,7 +142,7 @@
                             </div>
                             <div class="col c6 hide product-details">
                                 <div class="absolute product-close-btn">
-                                    <a onclick="seeProduct('2')"><i class="fas fa-times"></i></a>
+                                    <a onclick="closeProduct('2')"><i class="fas fa-times"></i></a>
                                 </div>
                                 <div class="padding-20">
                                     <div class="text-title">
@@ -177,7 +177,7 @@
                             </div>
                             <div class="col c6 hide product-details">
                                 <div class="absolute product-close-btn">
-                                    <a onclick="seeProduct('3')"><i class="fas fa-times"></i></a>
+                                    <a onclick="closeProduct('3')"><i class="fas fa-times"></i></a>
                                 </div>
                                 <div class="padding-20">
                                     <div class="text-title">
@@ -196,7 +196,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div id="4" class="Platter c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
@@ -212,7 +212,7 @@
                             </div>
                             <div class="col c6 hide product-details">
                                 <div class="absolute product-close-btn">
-                                    <a onclick="seeProduct('4')"><i class="fas fa-times"></i></a>
+                                    <a onclick="closeProduct('4')"><i class="fas fa-times"></i></a>
                                 </div>
                                 <div class="padding-20">
                                     <div class="text-title">
@@ -293,22 +293,38 @@
                 }
             }
             function seeProduct(product_id){
+
+                var already_toggled_products = document.getElementsByClassName("product-toggled");
+                for(var i=0; i < already_toggled_products.length; i++){
+                    console.log("toggled products :", already_toggled_products);
+                    closeProduct(already_toggled_products[i].getAttribute("id"));
+                }
+
                 var product = document.getElementById(product_id);
-                //var document.getElementsByClassName("product-toggled")
-                //used to close all other product-toggle ?
                 var details = product.getElementsByClassName("product-details")[0];
                 var description = product.getElementsByClassName("product-description")[0];
                 var img = product.getElementsByClassName("product-img")[0];
-                if (product.classList.toggle("product-toggled")){
-                    img.setAttribute("onclick", "seePicture('" + product_id + "')" );
-                    img.style.cursor = "zoom-in";
-                }
-                else{
-                    img.setAttribute("onclick", "seeProduct('" + product_id + "')" );
-                    img.style.cursor = "pointer";
-                }
-                details.classList.toggle("hide");
-                description.classList.toggle("hide");
+
+                product.classList.add("product-toggled");
+                details.classList.remove("hide");
+                description.classList.remove("hide");
+                img.setAttribute("onclick", "seePicture('" + product_id + "')" );
+                img.style.cursor = "zoom-in";
+
+                /* Scroll to the item*/
+                product.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+            }
+            function closeProduct(product_id){
+                var product = document.getElementById(product_id);
+                var details = product.getElementsByClassName("product-details")[0];
+                var description = product.getElementsByClassName("product-description")[0];
+                var img = product.getElementsByClassName("product-img")[0];
+
+                product.classList.remove("product-toggled");
+                details.classList.add("hide");
+                description.classList.add("hide");
+                img.setAttribute("onclick", "seeProduct('" + product_id + "')" );
+                img.style.cursor = "pointer";
             }
             function seePicture(product_id){
                 var popup = document.getElementsByClassName("popup")[0];
@@ -324,7 +340,7 @@
             }
             function filter(type){
                 var products = document.getElementById("products").children;
-                
+
                 /*for each product : check if class contains type or not*/
                 for (var i=0; i < products.length; i++){
                     console.log("product", products[i]);
@@ -334,7 +350,7 @@
                         products[i].classList.add("hide");
                     }
                 }
-                
+
                 /* make the filter button used active (e.g. bold) */
                 var buttons = document.getElementsByClassName("filter category")[0].children;
                 for (var i = 1; i < buttons.length; i++){
@@ -346,10 +362,10 @@
                     }
                 }
             }
-            
+
             function initProducts(){
                 var products = document.getElementById("products");
-                
+
                 /* create a child for each product of the xml page*/
                 /* and append this child to products */
             }
