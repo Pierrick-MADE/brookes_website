@@ -209,7 +209,7 @@ function initProducts(xmlDoc){
         productsTXT += products[i].getAttribute("category");
         productsTXT += " c12 relative box-shadow\"><div class=\"col c6\"><div class=\"padding-20\"><div class=\"relative image-btn\"><a class=\"product-img\" onclick=\"seeProduct('";
         productsTXT += products[i].getAttribute("id");
-        productsTXT += "')\"><img class=\"box-shadow\" src=\"img/";
+        productsTXT += "')\"><img class=\"box-shadow loading\" src=\"img/";
         productsTXT += products[i].getElementsByTagName("img")[0].childNodes[0].nodeValue;
         productsTXT += ".jpg\" width=\"100%\" alt=\"";
         productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
