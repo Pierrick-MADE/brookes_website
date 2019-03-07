@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
 
-    <body onload="initProducts()">
+    <body onload="initData()">
         <!-- Navigation -->
         <nav>
             <a id="navbar-logo" href="index.html">
@@ -92,6 +92,7 @@
                 </div>
                 <div class="col c9">
                     <div id="products" class="row">
+                        XML and javascript does not seem to work ....
                         <div id="1" class="Platter c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
@@ -241,7 +242,7 @@
         <!-- POPUP -->
         <div class="popup hide">
             <div class="popup-content relative">
-                <img class="absolute popup-img" src="img/1.jpg" width="100%">
+                <img class="absolute popup-img" src="img/empty.png" width="100%">
                 <a class="absolute popup-close-btn"><i class="fas fa-search-minus"></i></a>
             </div>
         </div>
@@ -304,7 +305,7 @@
                 product.classList.add("product-toggled");
                 details.classList.remove("hide");
                 description.classList.remove("hide");
-                img.setAttribute("onclick", "seePicture('" + product_id + "')" );
+                img.setAttribute("onclick", "seePicture('" + img.getElementsByTagName("img")[0].getAttribute("src") + "')" );
                 img.style.cursor = "zoom-in";
 
                 /* Scroll to the item*/
@@ -319,7 +320,8 @@
                 product.classList.remove("product-toggled");
                 details.classList.add("hide");
                 description.classList.add("hide");
-                img.setAttribute("onclick", "seeProduct('" + product_id + "')" );
+                img.setAttribute("onclick", "seeProduct('" + img.getElementsByTagName("img")[0].getAttribute("src") + "')" );
+                console.log("img:src : ", img.getElementsByTagName("img")[0].getAttribute("src"));
                 img.style.cursor = "pointer";
             }
             function closeAllProducts(){
@@ -328,12 +330,12 @@
                     closeProduct(already_toggled_products[i].getAttribute("id"));
                 }
             }
-            function seePicture(product_id){
+            function seePicture(img_path){
                 var popup = document.getElementsByClassName("popup")[0];
                 var img = popup.getElementsByTagName("img")[0];
                 var body = document.getElementsByTagName("body")[0];
-                img.setAttribute("src", "img/" + product_id + ".jpg");
-                popup.setAttribute("onclick", "seePicture('" + product_id + "')" );
+                img.setAttribute("src", img_path);
+                popup.setAttribute("onclick", "seePicture('" + img_path + "')" );
                 if (popup.classList.toggle("hide")){
                     body.style.overflow = "auto";
                 }else{
@@ -460,7 +462,49 @@
                     }
                 }
             }
-            function initProducts(){
+            function initData(){
+                /*xml initialisation*/ /*help from w3schools*/
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        initProducts(xhttp.responseXML);
+                    }
+                };
+                xhttp.open("GET", "data/products.xml", true);
+                xhttp.send(); 
+            }
+            function initProducts(xmlDoc){
+                /* create a child for each product of the xml page*/
+                /* and append this child to products */
+                var productsTXT = "";
+                var products = xmlDoc.getElementsByTagName("product");
+                for (var i=0; i < products.length; i++){
+                    productsTXT += "<div id=\"";
+                    productsTXT += products[i].getAttribute("id");
+                    productsTXT += "\" class=\"";
+                    productsTXT += products[i].getAttribute("category");
+                    productsTXT += " c12 relative box-shadow\"><div class=\"col c6\"><div class=\"padding-20\"><div class=\"relative image-btn\"><a class=\"product-img\" onclick=\"seeProduct('";
+                    productsTXT += products[i].getAttribute("id");
+                    productsTXT += "')\"><img class=\"box-shadow\" src=\"img/";
+                    productsTXT += products[i].getElementsByTagName("img")[0].childNodes[0].nodeValue;
+                    productsTXT += ".jpg\" width=\"100%\" alt=\"";
+                    productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    productsTXT += "\"><div class=\"absolute onImage price text-title\">";
+                    productsTXT += products[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+                    productsTXT += "</div></a></div></div></div><div class=\"col c6 hide product-details\"><div class=\"absolute product-close-btn\"><a onclick=\"closeProduct('";
+                    productsTXT += products[i].getAttribute("id");
+                    productsTXT += "')\"><i class=\"fas fa-times\"></i></a></div><div class=\"padding-20\"><div class=\"text-title product-title\">";
+                    productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    productsTXT += "</div><button class=\"add-to-cart\" onclick=\"\">ADD to cart</button>";
+                    productsTXT += products[i].getElementsByTagName("short_description")[0].childNodes[0].nodeValue;
+                    productsTXT += "</div></div><div class=\"col c12 hide product-description\"><div style=\"padding: 0 20px 20px 20px\">";
+                    productsTXT += products[i].getElementsByTagName("full_description")[0].childNodes[0].nodeValue;
+                    productsTXT += "</div></div></div>";
+                }
+                document.getElementById("products").innerHTML = productsTXT;
+                homePageFilter();
+            }
+            function homePageFilter(){
                 /*filters from home page*/
                 var homeFilter = sessionStorage.getItem("homeFilter")
                 if (homeFilter){
@@ -470,8 +514,6 @@
 
                 var products = document.getElementById("products");
 
-                /* create a child for each product of the xml page*/
-                /* and append this child to products */
             }
         </script>
     </body>
