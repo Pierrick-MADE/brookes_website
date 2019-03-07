@@ -31,9 +31,6 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
 blockquote, q {
     quotes: none;
 }
@@ -453,6 +450,19 @@ footer input[type=submit]:hover{
     @-moz-keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
     @-o-keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
     @keyframes popup-zoom-in {0%{opacity: 0; width: 0%;} 100%{opacity: 1; width: 100%;}}
+}
+
+/* --------------------- ABOUT PAGE ---------------------------------------- */
+.about-text{
+    line-height: 21px;
+    font-size: 17px;
+}
+.separation-line{
+    width:70%;
+    margin: 15px auto;
+    height: 3px;
+    background-color: var(--brown);
+    border: none;
 }
 
 /* --------------------- CONTACT PAGE -------------------------------------- */
