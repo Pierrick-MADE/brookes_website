@@ -28,7 +28,7 @@
                 <a class="navbar-item item2" href="products.html">Products</a>
                 <a class="navbar-item item3" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a class="navbar-item item5 relative" href="cart.html"><i class="fas fa-shopping-cart"></i><samp id="cart-count" class="absolute" >0</samp></a>
                 <hr />
             </div>
         </nav>
@@ -133,24 +133,6 @@
         </footer>
 
         <!-- Scripts -->
-        <script>
-            function toggle_menu(){
-                var items = document.getElementsByClassName("navbar-item");
-                var icon_toggle = document.getElementsByClassName("navbar-toggle")[0];
-                document.getElementsByTagName("main")[0].classList.toggle("toggled");
-                for (i = 0; i < items.length; i++){
-                    items[i].classList.toggle("toggled");
-                }
-                if (icon_toggle.classList.toggle("toggled")){
-                    icon_toggle.innerHTML = "<i class=\"fas fa-angle-up\"></i>";
-                }else{
-                    icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
-                }
-            }
-            function showProduct(type){
-                sessionStorage.setItem("homeFilter", type);
-                location.assign("products.html");
-            }
-        </script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>

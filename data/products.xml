@@ -122,7 +122,7 @@
         <price>40</price>
     </product>
 
-    <product id="9" category="Tea Set">
+    <product id="9" category="Tea-Set">
         <name>Tea glasses and tea tray</name>
         <images>
             <img>20</img>

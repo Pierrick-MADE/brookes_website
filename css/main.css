@@ -232,6 +232,9 @@ nav .item3:hover ~ hr{margin-left:47%; width:14.5%;}
 nav .item4:hover ~ hr{margin-left:67%; width:17%;}
 nav .item5:hover ~ hr{margin-left:90%; width:9%;}
 
+#cart-count{
+    right:-2px;
+}
 
 
 /* --------------------- Footer -------------------------------------------- */

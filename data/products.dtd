@@ -1,7 +1,7 @@
 <!ELEMENT products (product*)>
 <!ELEMENT product (name, images, short_description, full_description, price)>
 <!ATTLIST product id CDATA #REQUIRED>
-<!ATTLIST product category (Plate|Bowl|Platter|Tagine|Tea Set|Jug|Other) "Other">
+<!ATTLIST product category (Plate|Bowl|Platter|Tagine|Tea-Set|Jug|Other) "Other">
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT images (img+)>
 <!ELEMENT img (#PCDATA)>
