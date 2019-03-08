@@ -246,6 +246,7 @@ function initProducts(xmlDoc){
         productsTXT += products[i].getElementsByTagName("full_description")[0].childNodes[0].nodeValue;
         productsTXT += "</div></div></div>";
     }
+    productsTXT = productsTXT.replace(/\\n|\n/gm, "<br>");
     document.getElementById("products").innerHTML = productsTXT;
     homePageFilter();
 }
