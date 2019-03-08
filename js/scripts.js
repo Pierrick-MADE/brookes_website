@@ -1,6 +1,8 @@
+/* ----- Storage initialisation ------------------------ */
 var cart = [];
 localStorage.setItem("cart",JSON.stringify(cart));
 
+/* ----- Navigation Bar -------------------------------- */
 function toggle_menu(){
     var items = document.getElementsByClassName("navbar-item");
     var icon_toggle = document.getElementsByClassName("navbar-toggle")[0];
@@ -14,10 +16,26 @@ function toggle_menu(){
         icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
     }
 }
-function showProduct(type){
+
+/* ----- Common functions ------------------------------ */
+function scrollWell(element){
+    var elementRect = element.getBoundingClientRect();
+    var elementPosition = (elementRect.bottom-elementRect.top)/2 + elementRect.top + window.pageYOffset;
+    var middle = elementPosition - (window.innerHeight / 2);
+    window.scrollTo(0, middle);
+}
+
+/* ----- Home ------------------------------------------ */
+function discoverProductsHome(){
+    var productOverview = document.getElementById("discover-products");
+    scrollWell(productOverview);
+}
+function showProducts(type){
     localStorage.setItem("homeFilter", type);
     location.assign("products.html");
 }
+
+/* ----- Products -------------------------------------- */
 function seeProduct(product_id){
 
     closeAllProducts();
@@ -34,7 +52,8 @@ function seeProduct(product_id){
     img.style.cursor = "zoom-in";
 
     /* Scroll to the item*/
-    product.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    scrollWell(product);
+    /*product.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});*/
 }
 function closeProduct(product_id){
     var product = document.getElementById(product_id);
@@ -240,17 +259,16 @@ function homePageFilter(){
 
     var products = document.getElementById("products");
 }
-function arrayRemove(arr, value){
-    /* https://love2dev.com/blog/javascript-remove-from-array/ */
-    return arr.filter(function(ele){
-        return ele != value;
-    });
-
+/* ----- Contact --------------------------------------- */
+function submitMessage(){
+   alert("An error occured with the form, please send us a mail directly at .....\nPlease excuse us for the inconvenience");
 }
+
+/* ----- Shopping Cart --------------------------------- */
 /*
 function addToCart(product_id){
     var storedCart = JSON.parse(localStorage.getItem("cart"));
-    
+
     var product = document.getElementById(product_id);
     var addBtn = product.getElementsByClassName("add-to-cart")[0];
     if (addBtn.classList.toggle("product-in-cart")){ add to cart

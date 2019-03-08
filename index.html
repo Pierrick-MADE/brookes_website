@@ -38,7 +38,7 @@
             <div class="relative">
                 <img src="img/17.jpg" alt="Main image showing the type of work done" width=100%>
                 <div class="absolute home-btn-discover">
-                    <a href="#discover-products" class="text-title">Discover<br>Products !</a>
+                    <a onclick="discoverProductsHome()" class="text-title">Discover<br>Products !</a>
                 </div>
                 <div class="absolute onImage text-title centered home-main-description">
                     Bautifully handmade &amp; hand-painted traditional Moroccan ceramics
@@ -47,14 +47,14 @@
             <div class="text-title centered padding-10 home-main-description-small">
                 Bautifully handmade &amp; hand-painted traditional Moroccan ceramics
             </div>
-            <div id="discover-products" class="centered padding-20">
+            <div class="centered padding-20">
                 Discover our extensive selection
             </div>
-            <div class="row" style="margin-bottom: 15px;">
+            <div id="discover-products" class="row" style="margin-bottom: 15px;">
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a onclick="showProduct('Bowl')">
+                            <a onclick="showProducts('Bowl')">
                                 <img class="box-shadow" src="img/7.jpg" width="100%" alt="Bowls"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Bowls
@@ -66,7 +66,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a onclick="showProduct('Platter')">
+                            <a onclick="showProducts('Platter')">
                                 <img class="box-shadow" src="img/1.jpg" width="100%" alt="Platter"> <!--or ....jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Plates &amp; Platters
@@ -78,7 +78,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a onclick="showProduct('Tagine')">
+                            <a onclick="showProducts('Tagine')">
                                 <img class="box-shadow" src="img/15.jpg" width="100%" alt="Tagines"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; left:5%;">
                                     Tagines
@@ -90,7 +90,7 @@
                 <div class="col c6">
                     <div class="padding-20">
                         <div class="relative image-btn">
-                            <a onclick="showProduct('all')">
+                            <a onclick="showProducts('all')">
                                 <img class="box-shadow" src="img/24.jpg" width="100%" alt="Image showing tea glasses"> <!--or 13.jpg-->
                                 <div class="absolute onImage text-title" style="top:5%; left:5%;">
                                     See All !
