@@ -158,17 +158,31 @@ nav{
     z-index: 5;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); /*shadow inspired by w3schools.com*/
 }
+.nav-brand{
+    display: inline-block;
+    position: relative;
+}
 nav img{
     height: 40px;
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 3px;
 }
+.nav-title{
+    position: absolute;
+    top:14px;
+    left:60px;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #FF7F00;
+    font-size: 25px;
+}
 .navbar-items{
     float: right;
     padding-right: 20px;
     padding-top: 15px;
-    vertical-align: middle
+    vertical-align: middle;
 }
 .navbar-item{
     display: inline;
