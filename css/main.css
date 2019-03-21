@@ -397,6 +397,7 @@ footer input[type=submit]:hover{
 .product-close-btn{
     right: 0.5%;
     top: 2%;
+    position: absolute;
     transform: translate(-50%,0%);
     font-size: 20px;
 }
@@ -404,7 +405,7 @@ footer input[type=submit]:hover{
     font-size: 22px;
 }
 @media only screen and (max-width:600px){
-    .product-close-btn{right:2%;top:58%} /*74 % if description not toggled*/
+    .product-close-btn{display: inline-block; position: relative; float: right; margin: 10px 10px 0 0;}
     .image-btn:hover{-ms-transform: scale(1.03); -webkit-transform: scale(1.03); transform: scale(1.03);}
     .filters{position:static;}
 }
