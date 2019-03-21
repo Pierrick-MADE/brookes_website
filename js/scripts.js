@@ -20,9 +20,14 @@ function toggle_menu(){
 /* ----- Common functions ------------------------------ */
 function scrollWell(element){
     var elementRect = element.getBoundingClientRect();
-    var elementPosition = (elementRect.bottom-elementRect.top)/2 + elementRect.top + window.pageYOffset;
-    var middle = elementPosition - (window.innerHeight / 2);
-    window.scrollTo(0, middle);
+    var elementHeight = elementRect.bottom - elementRect.top;
+    if (elementHeight < window.innerHeight){ /* scroll to get the element at the middle of the screen*/
+        var elementPosition = (elementRect.bottom-elementRect.top)/2 + elementRect.top + window.pageYOffset;
+        var middle = elementPosition - (window.innerHeight / 2);
+        window.scrollTo(0, middle);
+    } else { /* scroll to get the top of the element at the top of the screen*/
+        window.scrollTo(0, elementRect.top + window.pageYOffset - 51);
+    }
 }
 
 /* ----- Home ------------------------------------------ */
