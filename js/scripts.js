@@ -270,6 +270,11 @@ function submitMessage(){
    alert("An error occured with the form, please send us a mail directly at .....\nPlease excuse us for the inconvenience");
 }
 
+
+function disclaimer(){
+    alert("Disclaimer: The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University. This site is constructed as coursework for module U08054 at Oxford Brookes University. It is not a working web-site.");
+}
+
 /* ----- Shopping Cart --------------------------------- */
 /*
 function addToCart(product_id){
