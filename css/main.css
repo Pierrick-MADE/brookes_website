@@ -305,6 +305,30 @@ footer input[type=submit]:hover{
 }
 
 
+/* --------------------- Disclaimer ---------------------------------------- */
+.disclaimer{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+}
+.disclaimer-title{
+    max-width: 250px;
+    background: var(--white);
+    padding: 14px;
+    border-radius: 8px 8px 2px 1px;
+    opacity: 0.8;
+}
+.disclaimer-content{
+    max-width: 250px;
+    background: var(--white);
+    padding: 14px;
+    border-radius: 8px 8px 2px 1px;
+}
+
+
 /* --------------------- HOME PAGE ----------------------------------------- */
 .image-btn {
     transition: all 0.1s ease-in-out    
