@@ -11,9 +11,9 @@ function toggle_menu(){
         items[i].classList.toggle("toggled");
     }
     if (icon_toggle.classList.toggle("toggled")){
-        icon_toggle.innerHTML = "<i class=\"fas fa-angle-up\"></i>";
+        icon_toggle.innerHTML = "<img src=\"img/icons/angle-up.png\" height=\"16px\">";
     }else{
-        icon_toggle.innerHTML = "<i class=\"fas fa-bars\"></i>"
+        icon_toggle.innerHTML = "<img src=\"img/icons/bars.png\" height=\"16px\">"
     }
 }
 
@@ -54,6 +54,7 @@ function seeProduct(product_id){
     details.classList.remove("hide");
     description.classList.remove("hide");
     img.setAttribute("onclick", "seePicture('" + img.getElementsByTagName("img")[0].getAttribute("src") + "')" );
+    img.setAttribute("alt", details.getElementsByClassName("product-title")[0].innerHTML);
     img.style.cursor = "zoom-in";
 
     /* Scroll to the item*/

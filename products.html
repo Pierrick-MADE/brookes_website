@@ -6,14 +6,13 @@
 
         <!-- Stylesheets -->
         <link type="text/css" rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
         <!-- Meta data -->
 
         <!-- Tags -->
 
         <!-- Responsive tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
 
     <body onload="initData()">
@@ -21,18 +20,18 @@
         <nav>
             <div class="nav-brand">
                 <a id="navbar-logo" href="index.html">
-                    <img src="img/logo_fired_bowl.png" alt="logo">
+                    <img src="img/logo_fired_bowl.png" alt="fired bowl company logo">
                     <div class="nav-title">Fired Bowl</div>
                 </a>
             </div>
             <div class="navbar-items">
-                <button class="navbar-toggle" onclick="toggle_menu()"><i class="fas fa-bars"></i></button>
+                <button class="navbar-toggle" onclick="toggle_menu()"><img alt="toggle menu" src="img/icons/bars.png" height="16px"></button>
                 <a class="navbar-item item1" href="index.html">Home</a>
                 <a class="navbar-item item2 active" href="products.html">Products</a>
                 <a class="navbar-item item3" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5 relative" href="cart.html"><i class="fas fa-shopping-cart"></i><samp id="cart-count" class="absolute" >0</samp></a>
-                <hr/>
+                <a class="navbar-item item5 relative" href="cart.html"><img alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
+                <hr />
             </div>
         </nav>
 
@@ -246,11 +245,9 @@
         <!-- POPUP -->
         <div class="popup hide">
             <div class="popup-content relative">
-                <img class="loading absolute popup-img" src="img/empty.png" width="100%">
-                <a class="absolute popup-close-btn"><i class="fas fa-search-minus"></i></a>
+                <img class="loading absolute popup-img" src="img/empty.png" alt="empty" width="100%">
             </div>
         </div>
-
 
         <!-- Footer -->
         <footer class="row centered">
@@ -262,25 +259,40 @@
                 <a href="cart.html">Cart</a>
             </div>
             <div class="col c4">
-                <a class="icon" href="#"><i class="fab fa-facebook-square"></i></a>
-                <a class="icon" href="#"><i class="fab fa-twitter-square"></i></a>
-                <a class="icon" href="#"><i class="fab fa-instagram"></i></a>
-                <a class="icon" href="#"><i class="far fa-envelope"></i></a><br>
+                <a class="icon" href="#"><img alt="facebook icon" src="img/icons/facebook.png" height="24px"></a>
+                <a class="icon" href="#"><img alt="instagram icon" src="img/icons/instagram.png" height="24px"></a>
+                <a class="icon" href="#"><img alt="mail icon" src="img/icons/envelope.png" height="24px"></a><br>
                 +33 6 00 11 22 33<br>
                 contact@firedBowl.com<br>
                 68 Hollow road, London, UK<br>
                 Monday-Saturday : 8am - 5pm
-
             </div>
             <div class="col c4">
                 Newsletter
                 <form action="">
-                    <input type="text" name="Mail" placeholder="Email Adress">
+                    <input type="text" name="mail" label="mail" placeholder="Email Adress">
                     <br>
                     <input type="submit" value="Subscribe">
                 </form> 
             </div>
         </footer>
+
+        <!-- Disclaimer -->
+        <div class="relative">
+            <div class="disclaimer" role="button">
+                <div class="disclaimer-btn-close hide" onclick="disclaimer()"><img alt="close icon" src="img/icons/close.png" height="16px"></div>
+                <div class="disclaimer-btn-open" onclick="disclaimer()">
+                    <img alt="toggler for disclaimer" src="img/icons/angle-up.png" height="16px">
+                </div>
+                <div class="disclaimer-title" onclick="disclaimer()">
+                    Disclaimer !
+                </div>
+                <div class="disclaimer-content hide" onclick="disclaimer()">
+                    Disclaimer !<br>
+                    The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University. This site is constructed as coursework for module U08054 at Oxford Brookes University. It is not a working web-site.
+                </div>
+            </div>
+        </div>
 
         <!-- Scripts -->
         <script src="js/scripts.js"></script>

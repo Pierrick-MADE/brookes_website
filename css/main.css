@@ -1,3 +1,9 @@
+/* --------------------- ICONS FONTAWESOME --------------------------------- */
+/* icons used in this website come from fontawesome
+v5.8.1
+License : https://fontawesome.com/license
+(Creative Commons Attribution 4.0 International license)
+*/
 /* --------------------- RESET CSS ----------------------------------------- */
 /* http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
@@ -162,7 +168,7 @@ nav{
     display: inline-block;
     position: relative;
 }
-nav img{
+.nav-brand img{
     height: 40px;
     padding-left: 5px;
     padding-top: 5px;
@@ -211,15 +217,10 @@ nav img{
     background-color: transparent; 
     border: none;
     color: var(--olive);
-    text-align: center;
     padding: 4px 4px 0 0;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 17px;
-    vertical-align: middle
 }
 .navbar-toggle:hover{
-    font-size: 17px;
+    transform:scale(1.1);
 }
 @media only screen and (max-width:600px){
     .navbar-item{display: none;}
@@ -250,7 +251,7 @@ nav .item4:hover ~ hr{margin-left:67%; width:17%;}
 nav .item5:hover ~ hr{margin-left:90%; width:9%;}
 
 #cart-count{
-    right:-2px;
+    right:-3px;
 }
 
 
@@ -274,11 +275,10 @@ footer a:hover:not(.icon){
     font-size: 110%;
 }
 footer .icon{
-    font-size: 25px;
     padding: 8px;
 }
-footer .icon:hover{
-    color:var(--brown);
+footer .icon:hover, .contact-infos .icon:hover{
+    -webkit-filter: drop-shadow(0px 0px 4px var(--brown));filter: drop-shadow(0px 0px 4px var(--brown));
 }
 footer form{
     padding:10px;
@@ -319,8 +319,14 @@ footer input[type=submit]:hover{
     position: absolute;
     z-index: 5;
     cursor: pointer;
-    top: 7px;
-    right: 7px;
+}
+.disclaimer-btn-close{
+    top: 8px;
+    right: 10px;
+}
+.disclaimer-btn-open{
+    top: 30%;
+    right: 10%;
 }
 .disclaimer-title, .disclaimer-content{
     -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
@@ -476,18 +482,6 @@ footer input[type=submit]:hover{
     -o-animation:      popup-zoom-in 1s; /* Opera 12+ */
     animation:         popup-zoom-in 1s; /* IE 10+, Fx 29+ */
 }
-.popup-close-btn{
-    display:none;
-    right: 2%;
-    top: 20%;
-    transform: translate(-50%,0%);
-    font-size: 30px;
-    color: var(--white);
-}
-.popup-close-btn:hover{
-    font-size: 33px;
-    color: var(--white);
-}
 .popup-img{
     top:50%;
     left:50%;
@@ -537,8 +531,6 @@ footer input[type=submit]:hover{
     -ms-transform:translate(0%,-50%);
 }
 .contact-infos .icon{
-    color: var(--brown);
-    font-size: 20px;
     line-height: 25px;
     padding: 3px;
 }
@@ -559,10 +551,10 @@ footer input[type=submit]:hover{
     padding: 10px 0 10px 0;
     text-indent: 40px;
 }
-.contact-form input[name="mail"]{background-image: url(../img/envelope.jpg);}
-.contact-form input[name="name"]{background-image: url(../img/user.jpg);}
-.contact-form input[name="number"]{background-image: url(../img/phone.jpg);}
-.contact-form textarea[name="message"]{background-image: url(../img/comment.jpg); height:100px;}
+.contact-form input[name="mail"]{background-image: url(../img/icons/envelope.png);}
+.contact-form input[name="name"]{background-image: url(../img/icons/user.png);}
+.contact-form input[name="number"]{background-image: url(../img/icons/phone.png);}
+.contact-form textarea[name="message"]{background-image: url(../img/icons/comment.png); height:100px;}
 .contact-form input[type=submit]{
     float: right;
     width: auto;
