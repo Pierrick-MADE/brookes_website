@@ -310,24 +310,40 @@ footer input[type=submit]:hover{
     position: fixed;
     bottom: 0;
     right: 20px;
+    -webkit-animation: disclaimer-in 1s; /* Safari 4+ */
+    -moz-animation:    disclaimer-in 1s; /* Fx 5+ */
+    -o-animation:      disclaimer-in 1s; /* Opera 12+ */
+    animation:         disclaimer-in 1s; /* IE 10+, Fx 29+ */
+}
+.disclaimer-btn-close, .disclaimer-btn-open{
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    top: 7px;
+    right: 7px;
+}
+.disclaimer-title, .disclaimer-content{
     -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+    max-width: 250px;
+    background: var(--white);
+    padding: 14px;
+    border-radius: 8px 8px 2px 1px;
 }
 .disclaimer-title{
-    max-width: 250px;
-    background: var(--white);
-    padding: 14px;
-    border-radius: 8px 8px 2px 1px;
     opacity: 0.8;
+    padding-right: 45px;
 }
 .disclaimer-content{
-    max-width: 250px;
-    background: var(--white);
-    padding: 14px;
-    border-radius: 8px 8px 2px 1px;
+    opacity: 1;
 }
-
+/* animations compatibility found on : */
+/* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
+@-webkit-keyframes disclaimer-in {0%{bottom: -50%;} 100%{bottom: 0;}}
+@-moz-keyframes disclaimer-in {0%{bottom: -50%;} 100%{bottom: 0;}}
+@-o-keyframes disclaimer-in {0%{bottom: -50%;} 100%{bottom: 0;}}
+@keyframes disclaimer-in {0%{bottom: -50%;} 100%{bottom: 0;}}
 
 /* --------------------- HOME PAGE ----------------------------------------- */
 .image-btn {

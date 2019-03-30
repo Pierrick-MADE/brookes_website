@@ -275,6 +275,8 @@ function disclaimer(){
     /* toggle disclaimer title/content hide or not */
     document.getElementsByClassName("disclaimer-title")[0].classList.toggle("hide");
     document.getElementsByClassName("disclaimer-content")[0].classList.toggle("hide");
+    document.getElementsByClassName("disclaimer-btn-close")[0].classList.toggle("hide");
+    document.getElementsByClassName("disclaimer-btn-open")[0].classList.toggle("hide");
 }
 
 /* ----- Shopping Cart --------------------------------- */
