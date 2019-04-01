@@ -242,7 +242,7 @@ function initProducts(xmlDoc){
         productsTXT += products[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
         productsTXT += "</div></a></div></div></div><div class=\"col c6 hide product-details\"><div class=\"product-close-btn\"><a onclick=\"closeProduct('";
         productsTXT += products[i].getAttribute("id");
-        productsTXT += "')\"><i class=\"fas fa-times\"></i></a></div><div class=\"padding-20\"><div class=\"text-title product-title\">";
+        productsTXT += "')\"><img alt=\"close icon\" src=\"/img/icons/close.png\" height=\"16px\"></a></div><div class=\"padding-20\"><div class=\"text-title product-title\">";
         productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         productsTXT += "</div><button class=\"add-to-cart\" onclick=\"addToCart('";
         productsTXT += products[i].getAttribute("id");
