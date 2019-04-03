@@ -1,5 +1,5 @@
 /* --------------------- ICONS FONTAWESOME --------------------------------- */
-/* icons used in this website come from fontawesome
+/* icons used in this website (img/icons) come from fontawesome
 v5.8.1
 License : https://fontawesome.com/license
 (Creative Commons Attribution 4.0 International license)
@@ -52,7 +52,7 @@ table {
 
 
 
-/* --------------------- TEXT FONT & COLORS -------------------------------- */
+/* --------------------- COLORS & TEXT FONT -------------------------------- */
 :root {
     --white: #FFFFFF;
     --brown: #844D36;
@@ -66,9 +66,19 @@ table {
 .blue{color:var(--blue);}
 .olive{color:var(--olive);}
 
-.onImage{color:var(--white);}
+body{
+    font-family: 'Karla', sans-serif;
+}
+.onImage{
+    color:var(--white);
+}
+.text-title{
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-.text-title{font-size: 22px; font-weight: bold; text-decoration: none; text-decoration: none;}
 
 
 /* --------------------- Main tags ----------------------------------------- */
@@ -182,6 +192,7 @@ nav{
     white-space: nowrap;
     text-decoration: none;
     color: #FF7F00;
+    font-family: 'Lora', serif;
     font-size: 25px;
 }
 .navbar-items{
