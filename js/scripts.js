@@ -246,9 +246,9 @@ function initProducts(xmlDoc){
         productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         productsTXT += "</div><button class=\"add-to-cart\" onclick=\"addToCart('";
         productsTXT += products[i].getAttribute("id");
-        productsTXT += "')\">ADD to cart</button>";
+        productsTXT += "')\">ADD to cart</button><div class=\"product-short-description\">";
         productsTXT += products[i].getElementsByTagName("short_description")[0].childNodes[0].nodeValue;
-        productsTXT += "</div></div><div class=\"col c12 hide product-description\"><div style=\"padding: 0 20px 20px 20px\">";
+        productsTXT += "</div></div></div><div class=\"col c12 hide product-description\"><div style=\"padding: 0 20px 20px 20px\">";
         productsTXT += products[i].getElementsByTagName("full_description")[0].childNodes[0].nodeValue;
         productsTXT += "</div></div></div>";
     }
