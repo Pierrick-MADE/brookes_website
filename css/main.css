@@ -4,8 +4,11 @@ v5.8.1
 License : https://fontawesome.com/license
 (Creative Commons Attribution 4.0 International license)
 */
+
+
 /* --------------------- RESET CSS ----------------------------------------- */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* Those lines allow us to avoid default css from websites
+http://meyerweb.com/eric/tools/css/reset/ 
 v2.0 | 20110126
 License: none (public domain)
 */
@@ -29,7 +32,6 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -51,8 +53,8 @@ table {
 }
 
 
-
 /* --------------------- COLORS & TEXT FONT -------------------------------- */
+/* These are variables for the colors used in my website*/
 :root {
     --white: #FFFFFF;
     --brown: #844D36;
@@ -66,12 +68,14 @@ table {
 .blue{color:var(--blue);}
 .olive{color:var(--olive);}
 
+/* default font defined for the document */
 body{
     font-family: 'Karla', sans-serif;
 }
 .onImage{
     color:var(--white);
 }
+/* style used for text-titles */
 .text-title{
     font-family: 'Lora', serif;
     font-size: 22px;
@@ -373,7 +377,7 @@ footer input[type=submit]:hover{
     -ms-transform: scale(1.08); /* IE 9 */
     -webkit-transform: scale(1.08);/* Safari */
     transform: scale(1.08);
-}
+} /*this is a google font*/
 
 .home-btn-discover{
     bottom: 2%;
@@ -412,11 +416,12 @@ footer input[type=submit]:hover{
 /* --------------------- PRODUCTS PAGE ------------------------------------- */
 .filters{
     position: sticky;
-    top: 10%;
+    top: 43px;
 }
 .filter a.active{
     font-weight: bold;
 }
+
 .image-btn {
     transition: all 0.1s ease-in-out;    
 }
