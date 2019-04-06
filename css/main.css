@@ -456,6 +456,16 @@ footer input[type=submit]:hover{
 }
 .product-description{
     text-align: justify;
+    animation:zoom-in 1s;
+
+}
+@keyframes zoom-in{
+    from{-webkit-transform:scale(0);transform:scale(0); font-size:0%;line-height: 0px;}
+    to{-webkit-transform:scale(1);transform:scale(1); font-size:100%;line-height: 100%}
+}
+@-webkit-keyframes zoom-in{
+    from{-webkit-transform:scale(0);transform:scale(0); font-size:0%;line-height: 0px;}
+    to{-webkit-transform:scale(1);transform:scale(1); font-size:100%;line-height: 100%;}
 }
 .product-short-description{
     text-align: center;
