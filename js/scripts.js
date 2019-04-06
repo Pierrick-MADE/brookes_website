@@ -30,6 +30,17 @@ function scrollWell(element){
     }
 }
 
+
+/* ----- Disclaimer ------------------------------------ */
+function disclaimer(){
+    /* toggle disclaimer title/content hide or not */
+    document.getElementsByClassName("disclaimer-title")[0].classList.toggle("hide");
+    document.getElementsByClassName("disclaimer-content")[0].classList.toggle("hide");
+    document.getElementsByClassName("disclaimer-btn-close")[0].classList.toggle("hide");
+    document.getElementsByClassName("disclaimer-btn-open")[0].classList.toggle("hide");
+}
+
+
 /* ----- Home ------------------------------------------ */
 function discoverProductsHome(){
     var productOverview = document.getElementById("discover-products");
@@ -271,14 +282,6 @@ function submitMessage(){
    alert("An error occured with the form, please send us a mail directly at .....\nPlease excuse us for the inconvenience");
 }
 
-
-function disclaimer(){
-    /* toggle disclaimer title/content hide or not */
-    document.getElementsByClassName("disclaimer-title")[0].classList.toggle("hide");
-    document.getElementsByClassName("disclaimer-content")[0].classList.toggle("hide");
-    document.getElementsByClassName("disclaimer-btn-close")[0].classList.toggle("hide");
-    document.getElementsByClassName("disclaimer-btn-open")[0].classList.toggle("hide");
-}
 
 /* ----- Shopping Cart --------------------------------- */
 /*
