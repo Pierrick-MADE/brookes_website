@@ -76,14 +76,15 @@ body{
     color:var(--white);
 }
 /* style used for text-titles */
-.text-title{
+.text-title, h1{
     font-family: 'Lora', serif;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 2px;
 }
-
+h2{font-family: 'Lora', serif; font-size: 20px; letter-spacing: 1px; font-weight: bold;}
+h3, h4{ font-family: 'Karla', sans-serif; font-size: 18px;}
 
 
 /* --------------------- Main tags ----------------------------------------- */
@@ -269,7 +270,8 @@ nav .item4:hover ~ hr{margin-left:68%; width:17%;}
 nav .item5:hover ~ hr{margin-left:92%; width:9%;}
 
 #cart-count{
-    right:-3px;
+    right:-10px;
+    top:15px;
 }
 
 
@@ -421,7 +423,7 @@ footer input[type=submit]:hover{
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    padding: 10px 30px;
+    padding: 8px 28px;
     text-align: center;
     transition: all .1s ease-in-out;
 }
@@ -442,6 +444,19 @@ footer input[type=submit]:hover{
 @media only screen and (max-width:600px){
     .home-main-description{display:none;}
     .home-main-description-small{display: block;}
+}
+.home-banner{
+    margin: 10px;
+    padding: 25px;
+    font-size: 20px;
+    -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    /* Tool used for gradient : http://colorzilla.com/gradient-editor/#556b2f+0,000000+100&0.65+0,0+100 */
+    background: -moz-linear-gradient(-45deg, rgba(85,107,47,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(85,107,47,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(85,107,47,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6556b2f', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /* --------------------- PRODUCTS PAGE ------------------------------------- */
@@ -655,6 +670,6 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border3{
+.christmas-banner, .snow, .snow-border1, .snow-border3, .happy-christmas-banner, .santa-hat{
     display: none;
 }
