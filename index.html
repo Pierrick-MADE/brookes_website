@@ -5,7 +5,7 @@
         <title>Fired Bowl World Ceramics</title>
 
         <!-- Stylesheets -->
-        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link id="css-sheet" type="text/css" rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Karla|Lora" rel="stylesheet"> <!-- font import-->
 
         <!-- Meta data -->
@@ -19,7 +19,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16x16.png">
         <link rel="manifest" href="img/logo/site.webmanifest">
-        
+
         <!-- Responsive tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
@@ -39,7 +39,7 @@
                 <a class="navbar-item item2" href="products.html">Products</a>
                 <a class="navbar-item item3" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5 relative" href="cart.html"><img alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
+                <a class="navbar-item item5 relative" href="cart.html"><img class="shopping-cart" alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
                 <hr />
             </div>
         </nav>
@@ -58,6 +58,7 @@
             <div class="text-title centered padding-10 home-main-description-small">
                 Bautifully handmade &amp; hand-painted traditional Moroccan ceramics
             </div>
+            <div class="centered christmas-banner padding-20">HAPPY CHRISTMAS:</div>
             <div class="centered padding-20">
                 Discover our extensive selection
             </div>
@@ -70,6 +71,7 @@
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Bowls
                                 </div>
+                                <div class="snow-border1"></div>
                             </a>
                         </div>
                     </div>
@@ -82,6 +84,7 @@
                                 <div class="absolute onImage text-title" style="top:5%; text-align: center; width:100%">
                                     Plates &amp; Platters
                                 </div>
+                                <div class="snow-border3"></div>
                             </a>
                         </div>
                     </div>
@@ -158,6 +161,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- CSS Switcher -->
+        <div class="css-switch" onclick="cssSwitch()">
+            css switch
+        </div>
+
+        <!-- Snowfall -->
+        <div class="snow"></div>
 
         <!-- Scripts -->
         <script src="js/scripts.js"></script>

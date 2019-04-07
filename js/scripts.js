@@ -40,6 +40,16 @@ function disclaimer(){
     document.getElementsByClassName("disclaimer-btn-open")[0].classList.toggle("hide");
 }
 
+/* ----- CSS Switch ------------------------------------ */
+function cssSwitch()
+{
+    var cssSheet = document.getElementById("css-sheet")
+    if (cssSheet.getAttribute("href") === "css/main.css"){
+        cssSheet.setAttribute("href","css/christmas.css");
+    }else{
+        cssSheet.setAttribute("href","css/main.css");
+    }
+}
 
 /* ----- Home ------------------------------------------ */
 function discoverProductsHome(){
