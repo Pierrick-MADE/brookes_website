@@ -580,9 +580,9 @@ footer input[type=submit]:hover{
     animation:         popup-bg-in 1s; /* IE 10+, Fx 29+ */
 }
 .popup-content{
-    width: 80%;
+    width: 90%;
     height: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     display: block;
     vertical-align: middle;
     margin: 0 auto;
@@ -592,10 +592,8 @@ footer input[type=submit]:hover{
     animation:         popup-zoom-in 1s; /* IE 10+, Fx 29+ */
 }
 .popup-img{
-    top:50%;
-    left:50%;
+    object-fit: scale-down;
     cursor: zoom-out;
-    transform: translate(-50%,-50%);
 }
 /* animations compatibility found on : */
 /* https://css-tricks.com/snippets/css/keyframe-animation-syntax/ */
