@@ -596,7 +596,7 @@ footer input[type=submit]:hover{
     z-index: 6;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background: rgb(174, 174, 174); /* Fallback for older browsers */
     background-color: rgba(0,0,0,0.7);
     -webkit-animation: popup-bg-in 1s; /* Safari 4+ */
@@ -721,6 +721,30 @@ footer input[type=submit]:hover{
     font-weight: bold;
 }
 
+/* --------------------- 404 PAGE ------------------------------------------ */
+.canvas404{
+    margin: 30px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color:rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    line-height: 30px;
+}
+.canvas404 hr{
+    max-width: 200px;
+}
+.canvas404 a{
+    font-size:20px;
+    text-decoration: underline;
+    display: block;
+    line-height: 35px;
+}
+.canvas404 a:hover{
+    font-size: 22px;
+}
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
 .christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat, .christmas-gift{
