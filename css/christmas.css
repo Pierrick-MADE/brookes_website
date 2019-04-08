@@ -601,10 +601,10 @@ footer input[type=submit]:hover{
 @-moz-keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
 @-o-keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
 @keyframes popup-bg-in {0%{opacity: 0;} 100%{opacity: 1;}}
-@-webkit-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
-@-moz-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
-@-o-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
-@keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:80%;}}
+@-webkit-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:90%;}}
+@-moz-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:90%;}}
+@-o-keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:90%;}}
+@keyframes popup-zoom-in {0%{opacity: 0; width:0%;} 100%{ opacity: 1; width:90%;}}
 
 @media only screen and (max-width: 600px){
     .popup-content{width:100%;}
