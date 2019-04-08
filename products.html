@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- author: Pierrick MADE -->
+        <!-- Title of the page -->
         <title>Fired Bowl World Ceramics - Products</title>
 
         <!-- Stylesheets -->
         <link id="css-sheet" type="text/css" rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Karla|Lora" rel="stylesheet"> <!-- font import-->
-        
+
         <!-- Meta data -->
         <meta charset="utf-8">
         <meta name="description" content="Fired Bowl World Ceramics">
@@ -19,7 +19,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16x16.png">
         <link rel="manifest" href="img/logo/site.webmanifest">
-        
+
         <!-- Responsive tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
@@ -39,7 +39,7 @@
                 <a class="navbar-item item2 active" href="products.html">Products</a>
                 <a class="navbar-item item3" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5 relative" href="cart.html"><img alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
+                <a class="navbar-item item5 relative" href="cart.html"><img class="shopping-cart" alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
                 <hr />
             </div>
         </nav>
@@ -55,8 +55,8 @@
                 <div class="col c3 filters">
                     <div class="padding-20">
                         <div class="filter category">
-                            <div class="text-title">Filter</div>
-                            <a onclick="filter('all')">
+                            <div class="text-title">Filter</div><hr>
+                            <a class="active" onclick="filter('all')">
                                 Show All
                             </a>
                             <a onclick="filter('Plate')">
@@ -82,8 +82,8 @@
                             </a>
                         </div>
                         <div class="filter sort">
-                            <div class="text-title">Sort by</div>
-                            <a onclick="sort('featured')">
+                            <div class="text-title">Sort by</div><hr>
+                            <a class="active" onclick="sort('featured')">
                                 Featured
                             </a>
                             <a onclick="sort('az')">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col c9">
+                <div class="col c9 products">
                     <div id="products" class="row">
                         <!--
                         XML and javascript does not seem to work ....
@@ -279,7 +279,8 @@
             <div class="col c4">
                 Newsletter
                 <form action="">
-                    <input type="text" name="mail" label="mail" placeholder="Email Adress">
+                    <label for="mail" style="display:none">Mail</label>
+                    <input id="mail" type="text" name="mail" placeholder="Email Adress">
                     <br>
                     <input type="submit" value="Subscribe">
                 </form> 
@@ -300,8 +301,17 @@
                     Disclaimer !<br>
                     The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University. This site is constructed as coursework for module U08054 at Oxford Brookes University. It is not a working web-site.
                 </div>
+                <div class="santa-hat"></div>
             </div>
         </div>
+
+        <!-- CSS Switcher -->
+        <div class="css-switch" onclick="cssSwitch()">
+            css switch
+        </div>
+
+        <!-- Snowfall -->
+        <div class="snow"></div>
 
         <!-- Scripts -->
         <script src="js/scripts.js"></script>

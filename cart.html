@@ -7,7 +7,7 @@
         <!-- Stylesheets -->
         <link id="css-sheet" type="text/css" rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Karla|Lora" rel="stylesheet"> <!-- font import-->
-        
+
         <!-- Meta data -->
         <meta charset="utf-8">
         <meta name="description" content="Fired Bowl World Ceramics">
@@ -19,7 +19,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16x16.png">
         <link rel="manifest" href="img/logo/site.webmanifest">
-        
+
         <!-- Responsive tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
@@ -39,7 +39,7 @@
                 <a class="navbar-item item2" href="products.html">Products</a>
                 <a class="navbar-item item3" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5 active relative" href="cart.html"><img alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
+                <a class="navbar-item item5 active relative" href="cart.html"><img class="shopping-cart" alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
                 <hr />
             </div>
         </nav>
@@ -74,7 +74,8 @@
             <div class="col c4">
                 Newsletter
                 <form action="">
-                    <input type="text" name="mail" label="mail" placeholder="Email Adress">
+                    <label for="mail" style="display:none">Mail</label>
+                    <input id="mail" type="text" name="mail" placeholder="Email Adress">
                     <br>
                     <input type="submit" value="Subscribe">
                 </form> 
@@ -95,8 +96,17 @@
                     Disclaimer !<br>
                     The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University. This site is constructed as coursework for module U08054 at Oxford Brookes University. It is not a working web-site.
                 </div>
+                <div class="santa-hat"></div>
             </div>
         </div>
+
+        <!-- CSS Switcher -->
+        <div class="css-switch" onclick="cssSwitch()">
+            css switch
+        </div>
+
+        <!-- Snowfall -->
+        <div class="snow"></div>
 
         <!-- Scripts -->
         <script src="js/scripts.js"></script>

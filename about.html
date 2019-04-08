@@ -19,7 +19,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/logo/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/logo/favicon-16x16.png">
         <link rel="manifest" href="img/logo/site.webmanifest">
-        
+
         <!-- Responsive tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
@@ -39,7 +39,7 @@
                 <a class="navbar-item item2" href="products.html">Products</a>
                 <a class="navbar-item item3 active" href="about.html">About</a>
                 <a class="navbar-item item4" href="contact.html">Contact</a>
-                <a class="navbar-item item5 relative" href="cart.html"><img alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
+                <a class="navbar-item item5 relative" href="cart.html"><img class="shopping-cart" alt="shopping-cart" src="img/icons/shopping-cart.png" height="15px"><samp id="cart-count" class="absolute" >0</samp></a>
                 <hr />
             </div>
         </nav>
@@ -50,7 +50,10 @@
             <div class="row">
                 <div class="col c7">
                     <div class="padding-20">
-                        <img src="img/17.jpg" width="100%" alt="product presentation image">
+                        <div class="relative">
+                            <img src="img/17.jpg" width="100%" alt="product presentation image">
+                            <div class="snow-border1"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="col c5">
@@ -94,6 +97,7 @@
                     <div class="padding-20">
                         <div style="padding-top: 75%; position: relative;">
                             <iframe class="absolute" style="top:0; left: 0;" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/8FJeyJyra9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="snow-border3"></div>
                         </div>
                     </div>
                 </div>
@@ -164,7 +168,8 @@
             <div class="col c4">
                 Newsletter
                 <form action="">
-                    <input type="text" name="mail" label="mail" placeholder="Email Adress">
+                    <label for="mail" style="display:none">Mail</label>
+                    <input id="mail" type="text" name="mail" placeholder="Email Adress">
                     <br>
                     <input type="submit" value="Subscribe">
                 </form> 
@@ -185,8 +190,17 @@
                     Disclaimer !<br>
                     The views and opinions expressed within these pages are personal and should not be construed as reflecting the views and opinions of Oxford Brookes University. This site is constructed as coursework for module U08054 at Oxford Brookes University. It is not a working web-site.
                 </div>
+                <div class="santa-hat"></div>
             </div>
         </div>
+
+        <!-- CSS Switcher -->
+        <div class="css-switch" onclick="cssSwitch()">
+            css switch
+        </div>
+
+        <!-- Snowfall -->
+        <div class="snow"></div>
 
         <!-- Scripts -->
         <script src="js/scripts.js"></script>

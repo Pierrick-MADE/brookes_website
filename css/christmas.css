@@ -464,8 +464,36 @@ footer input[type=submit]:hover{
     position: sticky;
     top: 43px;
 }
+.filter{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color:rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+}
+.filter .text-title{
+    text-align: center;
+}
+.filter hr{
+    max-width: 200px;
+}
+.filter a{
+    display: block;
+    line-height: 22px;
+}
 .filter a.active{
     font-weight: bold;
+    text-decoration: underline;
+}
+.filter a:hover{
+    font-size:110%;
+}
+@media only screen and (max-width:800px)
+{
+    .col.filters{width:100%; position: static; text-align: center;}
+    .col.products{width:100%;}
 }
 
 .image-btn {
@@ -670,7 +698,7 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border3, .happy-christmas-banner, .santa-hat{
+.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat{
     display: block;
 }
 @font-face {
@@ -705,6 +733,20 @@ footer input[type=submit]:hover{
     background-image: url(../img/decorations/snow-border1.png);
     background-repeat: no-repeat;
     background-size: contain
+}
+.snow-border-contact{
+    position: absolute;
+    top:-60%;
+    left:-40px;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/decorations/snow-border2.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+@media only screen and (max-width:600px){
+    .snow-border-contact{background-image: url(../img/decorations/snow-border1.png); top:-38px; left:0px;}
 }
 .snow-border3{
     position: absolute;

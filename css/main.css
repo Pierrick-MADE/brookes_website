@@ -464,10 +464,37 @@ footer input[type=submit]:hover{
     position: sticky;
     top: 43px;
 }
+.filter{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color:rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+}
+.filter .text-title{
+    text-align: center;
+}
+.filter hr{
+    max-width: 200px;
+}
+.filter a{
+    display: block;
+    line-height: 22px;
+}
 .filter a.active{
     font-weight: bold;
+    text-decoration: underline;
 }
-
+.filter a:hover{
+    font-size:110%;
+}
+@media only screen and (max-width:800px)
+{
+    .col.filters{width:100%; position: static; text-align: center;}
+    .col.products{width:100%;}
+}
 .image-btn {
     transition: all 0.1s ease-in-out;    
 }
@@ -670,6 +697,6 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border3, .happy-christmas-banner, .santa-hat{
+.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat{
     display: none;
 }
