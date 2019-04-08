@@ -697,6 +697,6 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat{
+.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat, .christmas-gift{
     display: none;
 }

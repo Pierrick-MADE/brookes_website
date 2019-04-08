@@ -698,7 +698,7 @@ footer input[type=submit]:hover{
 
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat{
+.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat, .christmas-gift{
     display: block;
 }
 @font-face {
@@ -781,6 +781,17 @@ footer input[type=submit]:hover{
     height: 35px;
     width: 30px;
     background-image: url(../img/decorations/santa-hat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.christmas-gift{
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    right: 10%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/decorations/gift.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
