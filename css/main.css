@@ -465,6 +465,7 @@ footer input[type=submit]:hover{
     top: 43px;
 }
 .filter{
+    display: block;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -492,8 +493,16 @@ footer input[type=submit]:hover{
 }
 @media only screen and (max-width:800px)
 {
+    .filter{display: inline-block; width: 42%; margin: 10px; vertical-align: top;}
+    .filter.sort{padding-bottom: 76px;}
     .col.filters{width:100%; position: static; text-align: center;}
     .col.products{width:100%;}
+}
+@media only screen and (max-width:600px)
+{
+    .filter{display: inline-block; width: 80%; margin: 10px; vertical-align: top;}
+    .filter.sort{padding-bottom: 10px;}
+    .col.filters{width:100%; position: static; text-align: center;}
 }
 .image-btn {
     transition: all 0.1s ease-in-out;    
