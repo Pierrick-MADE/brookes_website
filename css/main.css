@@ -493,8 +493,6 @@ footer input[type=submit]:hover{
 }
 @media only screen and (max-width:800px)
 {
-    .filter{display: inline-block; width: 42%; margin: 10px; vertical-align: top;}
-    .filter.sort{padding-bottom: 76px;}
     .col.filters{width:100%; position: static; text-align: center;}
     .col.products{width:100%;}
 }
