@@ -412,11 +412,20 @@ footer input[type=submit]:hover{
     transform: scale(1.08);
 } /*this is a google font*/
 
-.home-btn-discover{
-    bottom: 2%;
-    text-align: center;
+.container-home-btn-discover{
+    position: absolute;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    height: 96%;
+    align-items: flex-start;
+    display: flex;
+}
+.home-btn-discover{
+    position: sticky;
+    align-self: flex-end;
+    bottom: 10px;
+    text-align: center;
     background-color: var(--white);
     opacity: 0.8;
     color: var(--black);
@@ -428,9 +437,9 @@ footer input[type=submit]:hover{
     transition: all .1s ease-in-out;
 }
 .home-btn-discover:hover{
-    -ms-transform: scale(1.1) translate(-45%, 0); /* IE 9 */
-    -webkit-transform: scale(1.1) translate(-45%, 0); /* Safari */
-    transform: scale(1.1) translate(-45%, 0);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari */
+    transform: scale(1.1);
 }
 .home-main-description{
     top: 60%;
