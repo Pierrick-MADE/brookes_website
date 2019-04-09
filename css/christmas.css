@@ -311,14 +311,16 @@ footer input[type=text]{
     border-radius: 4px;
     width: 90%;
 }
-footer input[type=submit]{
+footer .newsletter-submit{/*input[type=submit]{*/
+    text-align: center;
     background-color: var(--brown);
     color: var(--white);
     padding: 10px 20px;
     border: 1px solid var(--brown);
+    border-radius: 4px;
     cursor: pointer;
 }
-footer input[type=submit]:hover{
+footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     border: 1px solid var(--brown);
     background-color: var(--white);
     color: var(--brown);
@@ -392,10 +394,10 @@ footer input[type=submit]:hover{
     text-align: justify;
 }
 .css-switch:hover{
-    -webkit-animation: css-bounce 0.3s ease infinite alternate; /* Safari 4+ */
-    -moz-animation:    css-bounce 0.3s ease infinite alternate; /* Fx 5+ */
-    -o-animation:      css-bounce 0.3s ease infinite alternate; /* Opera 12+ */
-    animation:         css-bounce 0.3s ease infinite alternate; /* IE 10+, Fx 29+ */
+    -webkit-animation: css-bounce 0.3s ease 6 alternate; /* Safari 4+ */
+    -moz-animation:    css-bounce 0.3s ease 6 alternate; /* Fx 5+ */
+    -o-animation:      css-bounce 0.3s ease 6 alternate; /* Opera 12+ */
+    animation:         css-bounce 0.3s ease 6 alternate; /* IE 10+, Fx 29+ */
 }
 @-webkit-keyframes css-bounce {0%{left:-40px} 30%{left:-40px;} 100%{left:-30px}}
 @-moz-keyframes css-bounce {0%{left:-40px} 30%{left:-40px;} 100%{left:-30px}}

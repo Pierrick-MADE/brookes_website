@@ -1,7 +1,3 @@
-/* ----- Storage initialisation ------------------------ */
-var cart = [];
-localStorage.setItem("cart",JSON.stringify(cart));
-
 /* ----- Navigation Bar -------------------------------- */
 function toggle_menu(){
     var items = document.getElementsByClassName("navbar-item");
@@ -29,7 +25,13 @@ function scrollWell(element){
         window.scrollTo(0, elementRect.top + window.pageYOffset - 51);
     }
 }
-
+function initCss(){
+    var cssSheet = document.getElementById("css-sheet")
+    if (localStorage.getItem("currentCss") === "christmas")
+    {
+        cssSheet.setAttribute("href","css/christmas.css");
+    }
+}
 
 /* ----- Disclaimer ------------------------------------ */
 function disclaimer(){
@@ -40,14 +42,28 @@ function disclaimer(){
     document.getElementsByClassName("disclaimer-btn-open")[0].classList.toggle("hide");
 }
 
+/* ----- ALERT not working ----------------------------- */
+function submitMessage(){
+    alert("This option of contact is not yet available\nPlease excuse us for the inconvenience");
+}
+function newsletterMessage(){
+    alert("The system of Newsletter is not yet implemented\nPlease excuse us for the inconvenience");
+}
+function addToCartMessage(){
+    alert("The system of Cart is not yet implemented\nPlease excuse us for the inconvenience");
+}
+
+
 /* ----- CSS Switch ------------------------------------ */
 function cssSwitch()
 {
     var cssSheet = document.getElementById("css-sheet")
     if (cssSheet.getAttribute("href") === "css/main.css"){
         cssSheet.setAttribute("href","css/christmas.css");
+        localStorage.setItem("currentCss", "christmas");
     }else{
         cssSheet.setAttribute("href","css/main.css");
+        localStorage.setItem("currentCss", "main");
     }
 }
 
@@ -287,11 +303,6 @@ function homePageFilter(){
 
     var products = document.getElementById("products");
 }
-/* ----- Contact --------------------------------------- */
-function submitMessage(){
-   alert("An error occured with the form, please send us a mail directly at .....\nPlease excuse us for the inconvenience");
-}
-
 
 /* ----- Shopping Cart --------------------------------- */
 /*
