@@ -755,6 +755,20 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     font-weight: bold;
 }
 
+/* --------------------- CART PAGE ----------------------------------------- */
+.cart-product-canvas, .checkout-canvas{
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color:rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
+}
+.checkout-canvas{
+    margin: 0px 20px 20px 20px;
+    float: right;
+}
+
 /* --------------------- 404 PAGE ------------------------------------------ */
 .canvas404{
     margin: 30px;

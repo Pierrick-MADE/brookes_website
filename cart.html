@@ -46,11 +46,35 @@
 
         <!-- Page Content -->
         <main>
-            1<br>
-            2<br>
-            3<br>
-            4<br>
-            This is the Cart Page !<br>
+            <h1 class="centered padding-20">Shopping Cart</h1>
+            <div class="padding-20">
+                <div class="cart-product-canvas row">
+                    <div class="padding-10">
+                        <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
+                        <div class="col c6 product-col">This is a random product Name</div>
+                        <div class="col c2 price-col">£ 34</div>
+                        <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+                    </div>
+                </div>
+                <div class="cart-product-canvas row">
+                    <div class="padding-10">
+                        <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
+                        <div class="col c6 product-col">This is a random product Name</div>
+                        <div class="col c2 price-col">£ 34</div>
+                        <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+                    </div>
+                </div>
+                <div class="cart-product-canvas row">
+                    <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
+                    <div class="col c6 product-col">This is a random product Name</div>
+                    <div class="col c2 price-col">£ 34</div>
+                    <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+                </div>
+            </div>
+            <div class="checkout-canvas">
+                <div class="cart-total">Total : </div>
+                <button class="checkout-btn" onclick="checkoutMessage()">Check Out</button>
+            </div>
         </main>
 
         <!-- Footer -->
