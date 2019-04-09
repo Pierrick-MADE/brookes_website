@@ -332,7 +332,8 @@ function addToCart(product_id){
             if (cart[i].product_id === product_id){
                 cart[i].numberInCart = 0;
             }
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log("cart : ", JSON.parse(localStorage.getItem("cart")));
     }
-    localStorage.setItem("cart", JSON.stringify(cart));
-    console.log("cart : ", JSON.parse(localStorage.getItem("cart")));
 }
