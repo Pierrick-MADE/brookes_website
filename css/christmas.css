@@ -542,6 +542,8 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     cursor: pointer;
     font-weight: bold;
     font-size: 17px;
+}
+.add-to-cart:not(.product-in-cart .add-to-cart){
     -webkit-animation: cart-animation 0.4s ease 2s 4; /* Safari 4+ */
     -moz-animation:    cart-animation 0.4s ease 2s 4; /* Fx 5+ */
     -o-animation:      cart-animation 0.4s ease 2s 4; /* Opera 12+ */
@@ -561,11 +563,16 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     75%{-webkit-transform: rotate(2deg); transform: rotate(2deg);}
     100%{-webkit-transform: rotate(0deg); transform: rotate(0deg);}
 }
-.add-to-cart:hover{
+.add-to-cart:hover, .product-in-cart .add-to-cart{
     border: 1px solid var(--brown);
     background-color: var(--white);
     color: var(--brown);
 }
+.product-in-cart .add-to-cart:hover{
+    background-color: var(--brown);
+    color: var(--white);
+}
+
 .product-toggled{
     float:left;
     margin: 0 9px 10px 9px;
