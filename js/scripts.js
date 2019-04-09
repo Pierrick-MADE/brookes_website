@@ -36,22 +36,24 @@ function updateCart(){
     var cart = JSON.parse(localStorage.getItem("cart"));
     var i;
     var totalInCart=0;
-    for (i=0; i<cart.length; i++){
-        totalInCart += cart[i].numberInCart;
+    if (cart){
+        for (i=0; i<cart.length; i++){
+            totalInCart += cart[i].numberInCart;
+        }
     }
     document.getElementById("cart-count").innerHTML = totalInCart
 }
 function initInCartProducts(){
-    console.log("hey");
     var cart = JSON.parse(localStorage.getItem("cart"));
     var i;
-    for (i=0; i<cart.length; i++){
-        if (cart[i].numberInCart > 0){
-            console.log(cart[i].product_id);
-            var product = document.getElementById(cart[i].product_id);
-            product.classList.toggle("product-in-cart");
-            var addBtn = product.getElementsByClassName("add-to-cart")[0];
-            addBtn.innerHTML = "REMOVE from cart";
+    if (cart){
+        for (i=0; i<cart.length; i++){
+            if (cart[i].numberInCart > 0){
+                var product = document.getElementById(cart[i].product_id);
+                product.classList.toggle("product-in-cart");
+                var addBtn = product.getElementsByClassName("add-to-cart")[0];
+                addBtn.innerHTML = "REMOVE from cart";
+            }
         }
     }
 }
@@ -300,7 +302,9 @@ function initProducts(xmlDoc){
         productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
         productsTXT += "\"><div class=\"absolute onImage price text-title\">";
         productsTXT += products[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-        productsTXT += "</div></a></div></div></div><div class=\"col c6 hide product-details\"><div class=\"product-close-btn\"><a onclick=\"closeProduct('";
+        productsTXT += "</div>";
+        productsTXT += "<div class=\"markOnCart\"><div class=\"absolute corner-image\"></div><img class=\"absolute\" src=\"img/icons/shopping-cart.png\" height=\"20px;\"></div>";
+        productsTXT += "</a></div></div></div><div class=\"col c6 hide product-details\"><div class=\"product-close-btn\"><a onclick=\"closeProduct('";
         productsTXT += products[i].getAttribute("id");
         productsTXT += "')\"><img alt=\"close icon\" src=\"img/icons/close.png\" height=\"16px\"></a></div><div class=\"padding-20\"><div class=\"text-title product-title\">";
         productsTXT += products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;

@@ -531,6 +531,22 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
 .price::before{
     content: "£ ";
 }
+.markOnCart{
+    display: none;
+}
+.markOnCart .corner-image{
+    top: 0;
+    right: 0;
+    border-top: 100px solid white;
+    border-left: 100px solid transparent;
+}
+.markOnCart img{
+    top: 20px;
+    right: 20px;
+}
+.product-in-cart .markOnCart{
+    display: block;
+}
 .add-to-cart{
     background-color: var(--brown);
     color: var(--white);
