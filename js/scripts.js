@@ -337,7 +337,7 @@ function addToCart(product_id){
     var products = document.getElementById("products").children;
     var cart = [];
     var i;
-    if (localStorage.getItem("cart") === "[]"){
+    if (localStorage.getItem("cart") === null){
         for(i=0; i < products.length; i++){
             cart.push({"product_id":products[i].getAttribute("id"), "numberInCart":0});
         }
