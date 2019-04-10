@@ -389,12 +389,14 @@ class CartItem {
 }
 
 function initCartPage() {
+    var cartContainer = document.getElementById("cart-item-container");
+    var cartTotalPrice = document.getElementById("cart-total");
     if (localStorage.getItem("cart") === null){
+        cartContainer.innerHTML = "<h2 class=\"centered padding-20\">Your shopping-cart is empty</h2>";
+        cartTotalPrice.innerHTML = "Total : £ 0";
         return;
     }
     var cart = JSON.parse(localStorage.getItem("cart"));
-    var cartContainer = document.getElementById("cart-item-container");
-    var cartTotalPrice = document.getElementById("cart-total");
     var noItems = true;
     var cartContainerHTML = "<h2 class=\"centered padding-20\">Your shopping-cart is empty</h2>";
     var totalPrice = 0;
