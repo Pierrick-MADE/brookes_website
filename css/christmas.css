@@ -908,7 +908,7 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     background-size: 35%;
     background-position: top right;
 }
-.navbar-item .shopping-cart{
+.navbar-item .shopping-cart, .markOnCart img{
     /* trick to change the image found at
     https://css-tricks.com/replace-the-image-in-an-img-with-css/
     */
@@ -917,9 +917,16 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
     background: url(../img/decorations/sleight.png) no-repeat;
     background-size: contain;
     background-position: center;
+}
+.navbar-item .shopping-cart{
     width: 17px; /* Width of new image */
     height: 15px; /* Height of new image */
     padding-left: 17px; /* Equal to width of new image */
+}
+.markOnCart img{
+    width: 27px; /* Width of new image */
+    height: 21px; /* Height of new image */
+    padding-left: 27px; /* Equal to width of new image */
 }
 .santa-hat{    
     position: absolute;
