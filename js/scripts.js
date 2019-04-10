@@ -74,8 +74,8 @@ function submitMessage(){
 function newsletterMessage(){
     alert("The system of Newsletter is not yet implemented\nPlease excuse us for the inconvenience");
 }
-function addToCartMessage(){
-    alert("The system of Cart is not yet implemented\nPlease excuse us for the inconvenience");
+function checkoutMessage(){
+    alert("The system of checkout is not yet implemented\nPlease excuse us for the inconvenience");
 }
 
 
@@ -339,7 +339,7 @@ function addToCart(product_id){
     var i;
     if (localStorage.getItem("cart") === null){
         for(i=0; i < products.length; i++){
-            cart.push({"product_id":products[i].getAttribute("id"), "numberInCart":0});
+            cart.push({"product_id":products[i].getAttribute("id"), "numberInCart":0, "product_name":products[i].getElementsByClassName("product-title")[0].innerHTML, "product_price":products[i].getElementsByClassName("price")[0].innerHTML, "product_img":products[i].getElementsByClassName("product-img")[0].getElementsByTagName("img")[0].getAttribute("src")});
         }
         localStorage.setItem("cart",JSON.stringify(cart));
     }
@@ -363,5 +363,66 @@ function addToCart(product_id){
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log("cart : ", JSON.parse(localStorage.getItem("cart")));
+    updateCart();
+}
+
+/* Solution for class as template found at : 
+https://stackoverflow.com/questions/51949650/how-to-use-javascript-and-html-template-to-fill-the-div
+*/
+class CartItem { 
+    constructor(id, img, name, price) {
+        this.itemTemplate = `
+<div class="cart-product-canvas">
+<div class="col c2">
+<img class="image-col" alt="${name}" src="${img}" width="100%">
+</div>
+<div class="col c7">
+<h3 class="product-name-col">${name}</h3>
+</div>
+<div class="col c2">
+<h3 class="price-col">£ ${price}</h3>
+</div>
+<button class="col c1 remove-btn" onclick="removeItem(${id})"><img src="img/icons/close.png" height="20px"></button>
+</div>
+`;
+    }
+}
+
+function initCartPage() {
+    if (localStorage.getItem("cart") === null){
+        return;
+    }
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    var cartContainer = document.getElementById("cart-item-container");
+    var cartTotalPrice = document.getElementById("cart-total");
+    var noItems = true;
+    var cartContainerHTML = "<h2 class=\"centered padding-20\">Your shopping-cart is empty</h2>";
+    var totalPrice = 0;
+    for(var i=0; i < cart.length; i++){
+        if (cart[i].numberInCart > 0){
+            if (noItems){
+                cartContainerHTML = "";
+                noItems = false;
+            }
+            var cartItem = new CartItem(cart[i].product_id, cart[i].product_img, cart[i].product_name, cart[i].product_price);
+            cartContainerHTML += cartItem.itemTemplate;
+            totalPrice += parseInt(cart[i].product_price, 10);
+        }
+    }
+    cartContainer.innerHTML = cartContainerHTML;
+    cartTotalPrice.innerHTML = "Total : £ " + totalPrice;
+}
+function removeItem(product_id){
+    if (localStorage.getItem("cart") === null){
+        return;
+    }
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    for (var i=0; i<cart.length; i++){
+        if (parseInt(cart[i].product_id, 10) === parseInt(product_id,10)){
+            cart[i].numberInCart = 0;
+        }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    initCartPage();
     updateCart();
 }
