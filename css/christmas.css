@@ -836,12 +836,22 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
 }
 
 /* --------------------- CHRISTMAS CSS ------------------------------------- */
-.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .happy-christmas-banner, .santa-hat, .christmas-gift{
+.christmas-banner, .snow, .snow-border1, .snow-border-contact, .snow-border3, .santa-hat, .christmas-gift, .happy-christmas-text{
     display: block;
 }
-@font-face {
-    font-family: ChristmasFont;
-    src: url(../fonts/ChristmasTinsel.ttf)
+.corner-garland{
+    display: inline-block;
+    top: -10px; left: -15px;
+    position: absolute;
+}
+@font-face { /* free for commercial use only if DONATION !!!! */
+    font-family: christmasFont;
+    src: url(../fonts/cartoon_blocks_christmas/Cartoon_Blocks_Christmas.otf);*/
+}
+.happy-christmas-text{
+    font-family: christmasFont;
+    font-size: 75px;
+    font-weight: normal;
 }
 .home-banner {
     padding-top:0px;
