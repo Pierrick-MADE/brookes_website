@@ -24,7 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
 
-    <body onload="initData(); initCss(); updateCart()">
+    <body onload="initCss(); updateCart(); initInCartProducts()"> <!-- initData(); init products from XML-->
         <!-- Navigation -->
         <nav>
             <div class="nav-brand">
@@ -99,148 +99,411 @@
                 </div>
                 <div class="col c9 products">
                     <div id="products" class="row">
-                        <!--
-                        XML and javascript does not seem to work ....
-                        <div id="1" class="Platter c12 relative box-shadow">
+                        <div id="1" class="Plate c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
                                     <div class="relative image-btn">
                                         <a class="product-img" onclick="seeProduct('1')">
-                                            <img class="box-shadow" src="img/1.jpg" width="100%" alt="Bowls">
-                                            <div class="absolute onImage price text-title">
-                                                34
+                                            <img class="box-shadow loading" src="img/11.jpg" width="100%" alt="Modern Red">
+                                            <div class="absolute onImage price text-title">30</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col c6 hide product-details">
-                                <div class="absolute product-close-btn">
-                                    <a onclick="closeProduct('1')"><img alt="cose icon" src="/img/icons/close.png" height="16px"></a>
-                                </div>
+                                <div class="product-close-btn"><a onclick="closeProduct('1')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
                                 <div class="padding-20">
-                                    <div class="text-title product-title">
-                                        TestA
-                                    </div>
-                                    <button class="add-to-cart" onclick="">ADD to cart</button>
-                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                    <div class="text-title product-title">Modern Red</div>
+                                    <button class="add-to-cart" onclick="addToCart('1')">ADD to cart</button>
+                                    <div class="product-short-description">Large plate in a contemporary Moroccan pattern</div>
                                 </div>
                             </div>
                             <div class="col c12 hide product-description">
-                                <div style="padding: 0 20px 20px 20px">
-
-                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
-                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
-                                    They make the perfect gift
-                                </div>
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand crafted in Safi on Morocco's Atlantic coast these large plates and bowls are as useful as they are beautiful.<br><br>            The perfect size for a centre fruit bow, great for serving a large salad or rice. Each one unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make an ideal gift!<br>        </div>
                             </div>
                         </div>
-
                         <div id="2" class="Bowl c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
                                     <div class="relative image-btn">
                                         <a class="product-img" onclick="seeProduct('2')">
-                                            <img class="box-shadow" src="img/2.jpg" width="100%" alt="Bowls">
-                                            <div class="absolute onImage price text-title">
-                                                32
+                                            <img class="box-shadow loading" src="img/23.jpg" width="100%" alt="Blue Bowl">
+                                            <div class="absolute onImage price text-title">25</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col c6 hide product-details">
-                                <div class="absolute product-close-btn">
-                                    <a onclick="closeProduct('2')"><img alt="cose icon" src="/img/icons/close.png" height="16px"></a>
-                                </div>
+                                <div class="product-close-btn"><a onclick="closeProduct('2')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
                                 <div class="padding-20">
-                                    <div class="text-title product-title">
-                                        testc
-                                    </div>
-                                    <button class="add-to-cart" onclick="">ADD to cart</button>
-                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                    <div class="text-title product-title">Blue Bowl</div>
+                                    <button class="add-to-cart" onclick="addToCart('2')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan large bowl in blue and white</div>
                                 </div>
                             </div>
                             <div class="col c12 hide product-description">
-                                <div style="padding: 0 20px 20px 20px">
-
-                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
-                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
-                                    They make the perfect gift
-                                </div>
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br>        </div>
                             </div>
                         </div>
-
                         <div id="3" class="Plate c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
                                     <div class="relative image-btn">
                                         <a class="product-img" onclick="seeProduct('3')">
-                                            <img class="box-shadow" src="img/3.jpg" width="100%" alt="Bowls">
-                                            <div class="absolute onImage price text-title">
-                                                94
+                                            <img class="box-shadow loading" src="img/1.jpg" width="100%" alt="Large blue plate">
+                                            <div class="absolute onImage price text-title">35</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col c6 hide product-details">
-                                <div class="absolute product-close-btn">
-                                    <a onclick="closeProduct('3')"><img alt="cose icon" src="/img/icons/close.png" height="16px"></a>
-                                </div>
+                                <div class="product-close-btn"><a onclick="closeProduct('3')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
                                 <div class="padding-20">
-                                    <div class="text-title product-title">
-                                        testb
-                                    </div>
-                                    <button class="add-to-cart" onclick="">ADD to cart</button>
-                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                    <div class="text-title product-title">Large blue plate</div>
+                                    <button class="add-to-cart" onclick="addToCart('3')">ADD to cart</button>
+                                    <div class="product-short-description">Large plate in a traditional Moroccan blue and white pattern</div>
                                 </div>
                             </div>
                             <div class="col c12 hide product-description">
-                                <div style="padding: 0 20px 20px 20px">
-
-                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
-                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
-                                    They make the perfect gift
-                                </div>
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand crafted in Safi on Morocco's Atlantic coast these large plates are as useful as they are beautiful.<br><br>            The perfect size for a centre fruit bow, great for serving a large salad or rice. Each one unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make an ideal gift<br>        </div>
                             </div>
                         </div>
-
                         <div id="4" class="Platter c12 relative box-shadow">
                             <div class="col c6">
                                 <div class="padding-20">
                                     <div class="relative image-btn">
                                         <a class="product-img" onclick="seeProduct('4')">
-                                            <img class="box-shadow" src="img/4.jpg" width="100%" alt="Bowls">
-                                            <div class="absolute onImage price text-title">
-                                                68
+                                            <img class="box-shadow loading" src="img/18.jpg" width="100%" alt="Green Platter">
+                                            <div class="absolute onImage price text-title">45</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col c6 hide product-details">
-                                <div class="absolute product-close-btn">
-                                    <a onclick="closeProduct('4')"><img alt="cose icon" src="/img/icons/close.png" height="16px"></a>
-                                </div>
+                                <div class="product-close-btn"><a onclick="closeProduct('4')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
                                 <div class="padding-20">
-                                    <div class="text-title product-title">
-                                        testa
-                                    </div>
-                                    <button class="add-to-cart" onclick="">ADD to cart</button>
-                                    Large hand painted Moroccan terracotta rim bowl in a traditional design<br>
+                                    <div class="text-title product-title">Green Platter</div>
+                                    <button class="add-to-cart" onclick="addToCart('4')">ADD to cart</button>
+                                    <div class="product-short-description">Large hand painted Moroccan platter in a traditional design, 40cm wide</div>
                                 </div>
                             </div>
                             <div class="col c12 hide product-description">
-                                <div style="padding: 0 20px 20px 20px">
-
-                                    Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>
-                                    The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>
-                                    They make the perfect gift
-                                </div>
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.<br><br>            The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make the perfect gift<br>        </div>
                             </div>
                         </div>
-                    -->
+                        <div id="5" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('5')">
+                                            <img class="box-shadow loading" src="img/16.jpg" width="100%" alt="Yellow bowl and plate">
+                                            <div class="absolute onImage price text-title">35</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('5')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Yellow bowl and plate</div>
+                                    <button class="add-to-cart" onclick="addToCart('5')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan medium bowl and plate in yellow</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Size - 20cm wide<br><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            They make stunning gifts, bring a touch of Moroccan culture and individuality to your home.<br>        </div>
+                            </div>
+                        </div>
+                        <div id="6" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('6')">
+                                            <img class="box-shadow loading" src="img/10.jpg" width="100%" alt="Orange bowls">
+                                            <div class="absolute onImage price text-title">20</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('6')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Orange bowls</div>
+                                    <button class="add-to-cart" onclick="addToCart('6')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan olive bowl in orange and white</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            Ideal as great for soup, dips and crisps<br>        </div>
+                            </div>
+                        </div>
+                        <div id="7" class="Tagine c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('7')">
+                                            <img class="box-shadow loading" src="img/15.jpg" width="100%" alt="Tagine">
+                                            <div class="absolute onImage price text-title">99</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('7')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Tagine</div>
+                                    <button class="add-to-cart" onclick="addToCart('7')">ADD to cart</button>
+                                    <div class="product-short-description">Large traditional Moroccan terracotta tagine</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Can be used on the hob with care, suitable for the oven but not the dishwasher. Perfect with a brazier<br><br>            Requires a heat diffuser, for using on the hob. See bottom of the page<br><br>            Recreate classic Moroccan tagines with the large tagine<br>        </div>
+                            </div>
+                        </div>
+                        <div id="8" class="Platter c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('8')">
+                                            <img class="box-shadow loading" src="img/2.jpg" width="100%" alt="Flower platter">
+                                            <div class="absolute onImage price text-title">40</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('8')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Flower platter</div>
+                                    <button class="add-to-cart" onclick="addToCart('8')">ADD to cart</button>
+                                    <div class="product-short-description">Large hand painted Moroccan platter in a traditional design.</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.<br><br>            The ideal size for the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make the perfect gift<br>        </div>
+                            </div>
+                        </div>
+                        <div id="9" class="Tea-Set c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('9')">
+                                            <img class="box-shadow loading" src="img/20.jpg" width="100%" alt="Tea glasses and tea tray">
+                                            <div class="absolute onImage price text-title">40</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('9')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Tea glasses and tea tray</div>
+                                    <button class="add-to-cart" onclick="addToCart('9')">ADD to cart</button>
+                                    <div class="product-short-description">Set of six tea glasses with a different colour pattern &amp; large silver coloured engraved tea tray.</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Perfect for serving mint tea<br><br>            Not dishwasher safe.<br>        </div>
+                            </div>
+                        </div>
+                        <div id="10" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('10')">
+                                            <img class="box-shadow loading" src="img/21.jpg" width="100%" alt="Terracotta bowl">
+                                            <div class="absolute onImage price text-title">10</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('10')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Terracotta bowl</div>
+                                    <button class="add-to-cart" onclick="addToCart('10')">ADD to cart</button>
+                                    <div class="product-short-description">Large hand painted Moroccan terracotta rim bowl in a traditional design</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand made in Fez in Morocco, these lovely large platters are as useful as they are beautiful.<br><br>            The ideal size for a the centre of the table, great for serving a fruit, large salads or rice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make the perfect gift<br>        </div>
+                            </div>
+                        </div>
+                        <div id="11" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('11')">
+                                            <img class="box-shadow loading" src="img/21.jpg" width="100%" alt="Flower bowl">
+                                            <div class="absolute onImage price text-title">10</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('11')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Flower bowl</div>
+                                    <button class="add-to-cart" onclick="addToCart('11')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan medium bowl in blue and white</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            They make the perfect gift<br>        </div>
+                            </div>
+                        </div>
+                        <div id="12" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('12')">
+                                            <img class="box-shadow loading" src="img/8.jpg" width="100%" alt="Skyblue bowl">
+                                            <div class="absolute onImage price text-title">20</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('12')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Skyblue bowl</div>
+                                    <button class="add-to-cart" onclick="addToCart('12')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan medium bowl in shades of blue.</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            They make the perfect gift<br>        </div>
+                            </div>
+                        </div>
+                        <div id="13" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('13')">
+                                            <img class="box-shadow loading" src="img/12.jpg" width="100%" alt="Olive bowls 1 and 2">
+                                            <div class="absolute onImage price text-title">20</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('13')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Olive bowls 1 and 2</div>
+                                    <button class="add-to-cart" onclick="addToCart('13')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan olive bowl in different colours</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            Ideal as great for soup, dips and crisps<br>        </div>
+                            </div>
+                        </div>
+                        <div id="14" class="Bowl c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('14')">
+                                            <img class="box-shadow loading" src="img/19.jpg" width="100%" alt="Pink bowl">
+                                            <div class="absolute onImage price text-title">20</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('14')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Pink bowl</div>
+                                    <button class="add-to-cart" onclick="addToCart('14')">ADD to cart</button>
+                                    <div class="product-short-description">Traditional Moroccan medium bowl in pink</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            These bowls are hand crafted in Safi on the Atlantic coast of Moroccan and individually decorated so each one is unique.<br><br>            Ideal as great for soup, dips and crisps<br>        </div>
+                            </div>
+                        </div>
+                        <div id="15" class="Jug c12 relative box-shadow">
+                            <div class="col c6">
+                                <div class="padding-20">
+                                    <div class="relative image-btn">
+                                        <a class="product-img" onclick="seeProduct('15')">
+                                            <img class="box-shadow loading" src="img/17.jpg" width="100%" alt="Jugs">
+                                            <div class="absolute onImage price text-title">10</div>
+                                            <div class="markOnCart">
+                                                <div class="absolute corner-image"></div>
+                                                <img class="absolute" src="img/icons/shopping-cart.png" height="20px;">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col c6 hide product-details">
+                                <div class="product-close-btn"><a onclick="closeProduct('15')"><img alt="close icon" src="img/icons/close.png" height="16px"></a></div>
+                                <div class="padding-20">
+                                    <div class="text-title product-title">Jugs</div>
+                                    <button class="add-to-cart" onclick="addToCart('15')">ADD to cart</button>
+                                    <div class="product-short-description">Hand painted Moroccan terracotta jugs in a traditional design</div>
+                                </div>
+                            </div>
+                            <div class="col c12 hide product-description">
+                                <div style="padding: 0 20px 20px 20px"><br>            Hand made in Fez in Morocco, 'these lovely large platters are as useful as they are beautiful.<br><br>            The ideal size for the centre of the table, great for serving a juice. Each one is hand painted and unique and bringing a true taste of Moroccan culture to your home.<br><br>            They make the perfect gift<br>        </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

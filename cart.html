@@ -24,7 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     </head>
 
-    <body onload="initCss(); updateCart()">
+    <body onload="initCss(); updateCart(); initCartPage()">
         <!-- Navigation -->
         <nav>
             <div class="nav-brand">
@@ -47,32 +47,23 @@
         <!-- Page Content -->
         <main>
             <h1 class="centered padding-20">Shopping Cart</h1>
-            <div class="padding-20">
-                <div class="cart-product-canvas row">
-                    <div class="padding-10">
-                        <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
-                        <div class="col c6 product-col">This is a random product Name</div>
-                        <div class="col c2 price-col">£ 34</div>
-                        <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+            <div id="cart-item-container" class="padding-20">
+                <h2 class="centered padding-20">Your shopping-cart is empty</h2>
+                <div class="cart-product-canvas">
+                    <div class="col c2">
+                        <img class="image-col" alt="product_name..." src="img/10.jpg" width="100%">
                     </div>
-                </div>
-                <div class="cart-product-canvas row">
-                    <div class="padding-10">
-                        <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
-                        <div class="col c6 product-col">This is a random product Name</div>
-                        <div class="col c2 price-col">£ 34</div>
-                        <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+                    <div class="col c7">
+                        <h3 class="product-name-col">This is a random product Name</h3>
                     </div>
-                </div>
-                <div class="cart-product-canvas row">
-                    <div class="col c2 image-col"><img alt="product_name..." src="img/10.jpg" width="100%"></div>
-                    <div class="col c6 product-col">This is a random product Name</div>
-                    <div class="col c2 price-col">£ 34</div>
-                    <div class="col c2 remove-btn"><img src="img/icons/close.png" height="20px"></div>
+                    <div class="col c2">
+                        <h3 class="price-col">£ 34</h3>
+                    </div>
+                    <button class="col c1 remove-btn" onclick="addToCart(product_id)"><img src="img/icons/close.png" height="22px"></button>
                 </div>
             </div>
             <div class="checkout-canvas">
-                <div class="cart-total">Total : </div>
+                <h2 id="cart-total">Total : £340</h2>
                 <button class="checkout-btn" onclick="checkoutMessage()">Check Out</button>
             </div>
         </main>

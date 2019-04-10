@@ -24,7 +24,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button, input, textarea, select{
     margin: 0;
     padding: 0;
     border: 0;
@@ -759,14 +759,55 @@ footer .newsletter-submit:hover{/*input[type=submit]:hover{*/
 .cart-product-canvas, .checkout-canvas{
     border-radius: 8px;
     margin-bottom: 20px;
+    padding: 20px;
     background-color:rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
     -moz-box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
     box-shadow: 5px 5px 19px -6px rgba(0,0,0,0.9);
 }
+.cart-product-canvas{
+    display: flex;
+    align-items: center;
+    clear: both;
+    width: calc(100%-40px);
+}
+.product-name-col{
+    padding: 0 20px 0 20px;
+}
+.price-col{
+    text-align: center;
+}
+.remove-btn{
+    background: none;
+    text-align: right;
+}
+.remove-btn:hover img{
+    height: 24px;
+}
+@media only screen and (max-width:600px){
+    .product-name-col{text-align: center;}
+}
 .checkout-canvas{
     margin: 0px 20px 20px 20px;
     float: right;
+}
+#cart-total{
+    margin-bottom:15px;
+}
+.checkout-btn{
+    text-align: center;
+    float: right;
+    background-color: var(--brown);
+    color: var(--white);
+    padding: 10px 20px;
+    border: 1px solid var(--brown);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.checkout-btn:hover{
+    border: 1px solid var(--brown);
+    background-color: var(--white);
+    color: var(--brown);
 }
 
 /* --------------------- 404 PAGE ------------------------------------------ */
